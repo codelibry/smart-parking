@@ -14,9 +14,10 @@
     "email": "contact@get.foundation"
   },
   "dependencies": {
-    "foundation-sites": "latest",
+    "foundation-sites": "^6.6.3",
     "jquery": ">=3.6.0",
-    "motion-ui": "latest",
+    "motion-ui": "^2.0.3",
+    "sass": "^1.86.0",
     "what-input": ">=5.2.10"
   },
   "devDependencies": {
