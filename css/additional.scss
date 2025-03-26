@@ -1,0 +1,51 @@
+@for $i from 0 through 9 {
+
+  .m-t-#{$i} {
+    margin-top: #{$i}rem;
+  }
+
+  .m-b-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
+
+// new hero CTA block
+.hero-cta-block {
+
+  .grid-x {
+    row-gap: 1.875rem;
+  }
+
+  @media screen and (min-width: 40em) {
+    .grid-padding-x>.cell {
+      padding-right: 1.875rem;
+      padding-left: 1.875rem;
+    }
+  }
+}
+
+.cta-title {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .grid-row-gap {
+    row-gap: .625rem;
+
+    .cell {
+      width: 100%;
+    }
+  }
+}

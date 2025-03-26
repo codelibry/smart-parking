@@ -16,17 +16,8 @@
                                                                      
 -->
 
-<?php
-  // SET DARK MODE IF SAVED IN COOKIE
-  $mode = null;
-
-  if (!empty($_COOKIE['mode'])) {
-    $mode = $_COOKIE['mode'];
-  }
-?>
-
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-mode="light">
+<html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width initial-scale=1">
@@ -47,4 +38,3 @@
 <?php
   get_template_part('template-parts/skip-links');
   get_template_part('template-parts/header/header');
-  get_template_part('template-parts/breadcrumbs');

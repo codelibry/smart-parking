@@ -1,9 +1,9 @@
 <?php get_header(); 
 
-$title                  = get_field('page404_title', 'option') ? get_field('page404_title', 'option') : __('Oops!', 'theme-name');
-$content                = get_field('page404_main_content', 'option') ? get_field('page404_main_content', 'option') : __('The Page you are looking for doesn\'t exist', 'theme-name');
-$homepage_button_label  = get_field('page404_homepage_button_label', 'option') ? get_field('page404_homepage_button_label', 'option') : __('Back To Homepage', 'theme-name') ;
-$shop_button_label      = get_field('page404_shop_button_label', 'option') ? get_field('page404_shop_button_label', 'option') : __('Back to Shop','theme-name');
+$title                  = get_field('page404_title', 'option') ? get_field('page404_title', 'option') : __('Oops!', 'spt');
+$content                = get_field('page404_main_content', 'option') ? get_field('page404_main_content', 'option') : __('The Page you are looking for doesn\'t exist', 'spt');
+$homepage_button_label  = get_field('page404_homepage_button_label', 'option') ? get_field('page404_homepage_button_label', 'option') : __('Back To Homepage', 'spt') ;
+$shop_button_label      = get_field('page404_shop_button_label', 'option') ? get_field('page404_shop_button_label', 'option') : __('Back to Shop','spt');
 
 ?>
 

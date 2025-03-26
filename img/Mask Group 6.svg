@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="334" viewBox="0 0 1920 334">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1228" data-name="Rectangle 1228" width="1920" height="334" transform="translate(0 2120.654)" fill="#ff5811"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_1399" data-name="Rectangle 1399" width="290" height="218" transform="translate(110 2120.706)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_6" data-name="Mask Group 6" transform="translate(0 -2120.654)" clip-path="url(#clip-path)">
+    <path id="Path_2382" data-name="Path 2382" d="M195.24.46H66.705L64.824,3.752,2.471,111.727.59,115.019l1.881,3.225L64.824,226.286l1.881,3.292H199l1.881-3.292,62.353-108.042,1.881-3.225-1.881-3.292L200.884,3.752,199,.46Z" transform="translate(1561.223 2178.016)" fill="#fff" stroke="rgba(255,255,255,0.27)" stroke-width="2" opacity="0.11"/>
+    <path id="Path_2384" data-name="Path 2384" d="M120.479.46H41.312L40.153,2.488l-38.4,66.5L.59,71.019l1.159,1.986,38.4,66.545,1.159,2.028H122.8l1.159-2.028,38.4-66.545,1.159-1.986-1.159-2.028-38.4-66.5L122.8.46Z" transform="translate(1688.669 2338.016)" fill="#fff" stroke="rgba(255,255,255,0.27)" stroke-width="2" opacity="0.11"/>
+    <g id="hex-white1" clip-path="url(#clip-path-2)">
+      <g id="Group_1483" data-name="Group 1483">
+        <path id="Path_2383" data-name="Path 2383" d="M70.468,229.579H199l1.881-3.292,62.352-107.975,1.881-3.292-1.881-3.225L200.884,3.752,199,.46H66.705L64.824,3.752,2.471,111.794.59,115.02l1.881,3.292L64.824,226.287l1.881,3.292Z" transform="translate(134.882 2099.456)" fill="#fff" stroke="rgba(255,255,255,0.27)" stroke-width="2" opacity="0.11"/>
+        <path id="Path_2385" data-name="Path 2385" d="M43.629,141.579H122.8l1.159-2.028,38.4-66.5,1.159-2.028-1.159-1.986-38.4-66.545L122.8.46H41.312L40.153,2.488,1.749,69.033.59,71.019l1.159,2.028,38.4,66.5,1.159,2.028Z" transform="translate(109.036 2027.456)" fill="#fff" stroke="rgba(255,255,255,0.27)" stroke-width="2" opacity="0.11"/>
+      </g>
+    </g>
+  </g>
+</svg>
