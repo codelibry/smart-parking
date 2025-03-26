@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-<main class="page" id="main">
+<?php
 
-index.php
+get_template_part('blocks/home-hero');
 
-</main>
-
+?>
 
 <?php get_footer(); ?>

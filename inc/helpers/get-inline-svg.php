@@ -12,7 +12,7 @@
  */
 function get_inline_svg(string $name): string {
   if ($name) {
-    $file_path = get_template_directory() . '/assets/icons/' . $name;
+    $file_path = get_template_directory() . '/img/' . $name;
 
     if (file_exists($file_path)) {
       return file_get_contents($file_path);
