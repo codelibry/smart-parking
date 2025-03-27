@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "build": "gulp sass",
+    "zip": "./zip.sh"
   },
   "author": "Foundation Yetinauts <contact@get.foundation> (https://get.foundation)",
   "license": "MIT",
