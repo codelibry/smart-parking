@@ -15,8 +15,9 @@ function codelibry_latest_post_type() {
     'label'                 => 'Latest',
     'supports'              => ['title', 'editor', 'thumbnail'],
     'menu_position'         => 5,
+    'query_var'             => true,
     'public'                => true,
-    'has_archive'           => false,
+    'has_archive'           => true,
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
     'rewrite'               => [

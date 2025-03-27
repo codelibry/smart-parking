@@ -56,3 +56,28 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
 	}
 }
+
+
+/**
+ * =================================================================
+ * Rewrite 'latest' CPT url
+ * =================================================================
+ */
+function custom_latest_rewrite_rules() {
+    add_rewrite_rule(
+        '^latest/([0-9]{4})/([a-z]+)/([^/]+)/?$',
+        'index.php?post_type=latest&name=$matches[3]',
+        'top'
+    );
+}
+add_action('init', 'custom_latest_rewrite_rules');
+
+function custom_latest_post_link($post_link, $post) {
+    if ($post->post_type === 'latest') {
+        $year = get_the_date('Y', $post);
+        $month = strtolower(get_the_date('F', $post));
+        return home_url("/latest/$year/$month/{$post->post_name}/");
+    }
+    return $post_link;
+}
+add_filter('post_type_link', 'custom_latest_post_link', 10, 2);
