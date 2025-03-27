@@ -7,7 +7,9 @@ $cta__button = get_field('industries__cta-button');
 $industries = get_posts([
   'post_type' => 'industry',
   'post_status' => 'publish',
-  'posts_per_page' => -1
+  'posts_per_page' => -1,
+  'order_by' => 'date',
+  'order' => 'ASC'
 ]);
 
 ?>

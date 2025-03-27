@@ -6,7 +6,9 @@ $button = get_field('city-scape__button');
 $systems = get_posts([
   'post_type' => 'system',
   'post_status' => 'publish',
-  'posts_per_page' => -1
+  'posts_per_page' => -1,
+  'order_by' => 'date',
+  'order' => 'ASC'
 ])
 
 ?>
