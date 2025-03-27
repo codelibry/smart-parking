@@ -1,51 +1,58 @@
 {
-    "key": "group_6732171f612f4",
-    "title": "Settings: 404",
+    "key": "group_testimonial_block",
+    "title": "Block: Tesimonial",
     "fields": [
         {
-            "key": "field_6732171fdfbf5",
-            "label": "Title (H1)",
-            "name": "page404_title",
+            "key": "field_testimonial_image",
+            "label": "Image",
+            "name": "testimonial__image",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
         },
         {
-            "key": "field_67321749dfbf6",
-            "label": "Main content",
-            "name": "page404_main_content",
+            "key": "field_testimonial_quote",
+            "label": "Quote",
+            "name": "testimonial__quote",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "rows": "",
             "placeholder": "",
             "new_lines": ""
         },
         {
-            "key": "field_673218757236f",
-            "label": "Homepage button label",
-            "name": "page404_homepage_button_label",
+            "key": "field_testimonial_position",
+            "label": "Position",
+            "name": "testimonial__position",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -58,14 +65,15 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_6732188772370",
-            "label": "Shop button label",
-            "name": "page404_shop_button_label",
+            "key": "field_testimonial_company",
+            "label": "Company",
+            "name": "testimonial__company",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -78,6 +86,7 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -86,9 +95,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf-options-404-error-page"
+                "value": "page"
             }
         ]
     ],
