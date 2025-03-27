@@ -20,7 +20,7 @@ function codelibry_partner_post_type() {
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
     'rewrite'               => [
-      'slug' => 'industries',
+      'slug' => 'partners',
       'with_front' => false
     ]
   ];

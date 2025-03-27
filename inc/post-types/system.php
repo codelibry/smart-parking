@@ -20,7 +20,7 @@ function codelibry_system_post_type() {
     'menu_icon'             => 'dashicons-admin-site-alt',
     'capability_type'       => 'page',
     'rewrite'               => [
-      'slug' => 'industries',
+      'slug' => 'our-system',
       'with_front' => false
     ]
   ];

@@ -40,7 +40,7 @@
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 1,
-            "rows": "",
+            "rows": 4,
             "placeholder": "",
             "new_lines": ""
         },
@@ -134,9 +134,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "page"
+                "value": ""
             }
         ]
     ],
@@ -149,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743070283
+    "modified": 1743079435
 }

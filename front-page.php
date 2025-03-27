@@ -8,6 +8,7 @@ get_template_part('blocks/city-scape');
 get_template_part('blocks/left-content');
 get_template_part('blocks/testimonial');
 get_template_part('blocks/partners');
+get_template_part('blocks/posts');
 
 ?>
 

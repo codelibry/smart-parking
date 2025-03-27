@@ -9,15 +9,16 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -29,18 +30,19 @@
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "new_lines": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 4,
             "placeholder": "",
-            "rows": ""
+            "new_lines": ""
         },
         {
             "key": "field_home_hero_button1",
@@ -96,9 +98,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "page"
+                "value": ""
             }
         ]
     ],
@@ -111,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743070283
+    "modified": 1743079366
 }
