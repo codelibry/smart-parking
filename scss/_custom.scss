@@ -813,33 +813,29 @@ footer {
     -moz-appearance: none;
     appearance: none;
 }
+
 #marketing-text {
     margin: 0.3rem;
 }
+
 .white-bg-hollow-btn {
     background: #fff !important;
 }
-/*.pane .signposts a:hover::after {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 600;
-    content: "\f061";
-    margin-left: 0.3rem;
-    text-decoration-line: none !important;
+
+
+/*
+ * Codelibry Updates
+ */
+.footer-outer-sociallink {
+  text-align: center;
 }
-.pane .signposts a::after {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 600;
-    content: "\f061";
-    margin-left: 0.3rem;
-    text-decoration-line: none !important;
-}*/
+
+.linkedin-link {
+  width: 6%;
+}
+
+@media only screen and (max-width: 600px) {
+  .linkedin-link {
+    width: 20%;
+  }
+}

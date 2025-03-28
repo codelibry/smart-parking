@@ -9,7 +9,7 @@
 
 function codelibry_setup(){
 
-	load_theme_textdomain( 'theme_slug', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'spt', get_template_directory() . '/languages' );
 
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
@@ -22,11 +22,11 @@ function codelibry_setup(){
 
   register_nav_menus(
     array(
-      'header-menu' => __('Header Menu', 'theme-name'),
-      'footer-menu' => __('Footer Menu', 'theme-name'),
-      'footer-menu-1' => __('Footer Col 1', 'theme-name'),
-      'footer-menu-2' => __('Footer Col 2', 'theme-name'),
-      'footer-menu-3' => __('Footer Col 3', 'theme-name'),
+      'header-menu' => __('Header Menu', 'spt'),
+      'footer-menu-1' => __('Footer Col 1', 'spt'),
+      'footer-menu-2' => __('Footer Col 2', 'spt'),
+      'footer-menu-3' => __('Footer Col 3', 'spt'),
+      'footer-menu-bottom' => __('Footer Bottom Menu', 'spt'),
     )
   );
 }
