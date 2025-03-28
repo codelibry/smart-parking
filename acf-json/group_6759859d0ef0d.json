@@ -3,11 +3,83 @@
     "title": "Settings: Footer Settings",
     "fields": [
         {
+            "key": "field_67e685fa3f735",
+            "label": "Button 1",
+            "name": "footer__button-1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67e6860d3f736",
+            "label": "Button 2",
+            "name": "footer__button-2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_6759859d6ebc5",
             "label": "Copyright",
-            "name": "copyright",
+            "name": "footer__copyright",
             "aria-label": "",
             "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Copyright Smart Parking 2025",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e686303f737",
+            "label": "Linkedin Link",
+            "name": "footer__linkedin-link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67e686533f738",
+            "label": "Legal Info",
+            "name": "footer__legal-info",
+            "aria-label": "",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,11 +88,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "<p>Smart Parking Ltd is registered in Scotland, registered number SC138255.<\/p>\r\n<p>The ultimate parent company in the UK is Smart Parking (UK) Limited, also registered in the UK registered number SC413479.<\/p>\r\n<p>Our registration address is 5, South Inch Business Centre, Perth, Perthshire, Scotland, PH2 8BW.<\/p>\r\n<p>Company V.A.T Reg. No 607582041<\/p>",
             "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         }
     ],
     "location": [
@@ -41,12 +114,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1743070283
+    "modified": 1743160995
 }

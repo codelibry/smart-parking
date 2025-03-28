@@ -823,8 +823,14 @@ footer {
 }
 
 
-/*
+
+
+/* ========================== /
  * Codelibry Updates
+ * ========================== */
+
+/*
+ * Footer updates
  */
 .footer-outer-sociallink {
   text-align: center;
@@ -837,5 +843,23 @@ footer {
 @media only screen and (max-width: 600px) {
   .linkedin-link {
     width: 20%;
+  }
+}
+
+footer .secondary-links a {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+  footer .secondary-links ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .secondary-links ul {
+    align-items: center;
+    flex-direction: column;
   }
 }

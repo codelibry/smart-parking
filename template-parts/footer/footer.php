@@ -5,6 +5,8 @@ $menus = [
         'title' => __('Industries', 'spt'),
         'menu' => wp_nav_menu([
             'theme_location' => 'footer-menu-1',
+            'menu_class' => 'no-bullet split-column small-undo-split',
+            'container' => false,
             'echo' => false,
         ])
     ],
@@ -12,6 +14,8 @@ $menus = [
         'title' => __('Our Systems', 'spt'),
         'menu' => wp_nav_menu([
             'theme_location' => 'footer-menu-2',
+            'menu_class' => 'no-bullet',
+            'container' => false,
             'echo' => false,
         ])
     ],
@@ -19,6 +23,8 @@ $menus = [
         'title' => __('The Company', 'spt'),
         'menu' => wp_nav_menu([
             'theme_location' => 'footer-menu-3',
+            'menu_class' => 'no-bullet',
+            'container' => false,
             'echo' => false,
         ])
     ],
@@ -26,22 +32,19 @@ $menus = [
 
 $policy_menu = wp_nav_menu([
     'theme_location' => 'footer-menu-bottom',
+    'menu_class' => 'no-bullet flex align-center mb-0',
+    'container' => false,
     'echo' => false,
 ]);
 
-$button_1 = ['title' => 'Pay / Appeal Parking Charge', 'url' => '#', 'target' => '_self'];
-$button_2 = null;
+$button_1 = get_field('footer__button-1', 'option');
+$button_2 = get_field('footer__button-2', 'option');
 
-$linkedin_link = ['title' => 'Pay / Appeal Parking Charge', 'url' => '#', 'target' => '_self'];
+$linkedin_link = get_field('footer__linkedin-link', 'option');
 
-$legal_info = "
-  Smart Parking Ltd is registered in Scotland, registered number SC138255. <br>
-  The ultimate parent company in the UK is Smart Parking (UK) Limited, also registered in the UK registered number SC413479. <br>
-  Our registration address is 5, South Inch Business Centre, Perth, Perthshire, Scotland, PH2 8BW. <br>
-  Company V.A.T Reg. No 607582041
-";
+$legal_info = get_field('footer__legal-info', 'option');
 
-$copyright = "Copyright Smart Parking 2023";
+$copyright = get_field('footer__copyright', 'option');
 
 ?>
 
