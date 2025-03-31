@@ -11,6 +11,11 @@
 <body <?php body_class(); ?>>
 
 <?php 
+
   the_field('body_scripts_top', 'option');
+
   function_exists('wp_body_open') ? wp_body_open() : do_action( 'wp_body_open' ); 
+
+  get_template_part('template-parts/header/header');
+
 ?>
