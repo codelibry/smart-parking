@@ -43,7 +43,7 @@ $systems = get_posts([
                                     <div class="card large text-center">
                                       <img class="mb-30" <?php acf_image_attrs(get_field('system__image', $system)) ?> style="max-width:100px;">
                                         <h4 class="mb-10" data-equalizer-watch><?php echo get_the_title($system) ?></h4>
-                                        <p><small><?php the_field('system__description', $system) ?></small></p>
+                                        <p><small><?php echo get_field('system__description', $system) ?></small></p>
                                     </div>
                                 </a>
                             </div>

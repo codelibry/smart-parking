@@ -47,7 +47,7 @@ function codelibry_enqueue () {
           jQuery('.play-button').fancybox();
       });
       
-      jQuery('#main-menu > li').on('click', function () {
+      jQuery('#menu-primary-menu > li').on('click', function () {
           if (jQuery(this).hasClass('active')) {
               jQuery(this).removeClass('active');
           } else {
