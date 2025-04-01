@@ -3,38 +3,6 @@
     "title": "Settings: Header",
     "fields": [
         {
-            "key": "field_67580717d141f",
-            "label": "Email",
-            "name": "email",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_6758073fd1420",
-            "label": "Phone",
-            "name": "phone",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_67580746d1421",
             "label": "Logo",
             "name": "site-logo",
@@ -48,10 +16,8 @@
                 "class": "",
                 "id": ""
             },
-            "uploader": "",
             "return_format": "array",
             "library": "all",
-            "acfe_thumbnail": 0,
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -59,6 +25,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
         },
         {
@@ -96,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743070283
+    "modified": 1743491383
 }
