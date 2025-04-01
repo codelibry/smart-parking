@@ -1,11 +1,10 @@
 <?php
 
-$posts_title = get_field('posts__title');
-$posts_button = get_field('posts__button');
+$posts_title = __('Related Case Studies & News', 'spt');
 
 $posts_list = get_latest_posts(
   $post_type = 'latest', 
-  $count = 6 
+  $count = 3 
 );
 
 ?>
@@ -19,13 +18,8 @@ $posts_list = get_latest_posts(
                         <?php echo esc_html($posts_title); ?>
                     </h2>
                 <?php endif; ?>
-
-                <?php if ($posts_button) : ?>
-                    <a <?php acf_link_attrs($posts_button); ?> class="button">
-                        <?php echo $posts_button['title'] ?>
-                    </a>
-                <?php endif; ?>
             </div>
+
             <div class="xxlarge-12 cell">
                 <div class="article-grid">
                     <div class="column">

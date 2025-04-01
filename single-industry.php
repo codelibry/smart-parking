@@ -15,6 +15,8 @@ get_template_part('blocks/single-hero');
 get_template_part('blocks/full-image');
 get_template_part('blocks/content-list');
 get_template_part('blocks/cta-bar');
+get_template_part('blocks/systems');
 get_template_part('blocks/testimonial');
+get_template_part('blocks/related-posts');
 
 get_footer();
