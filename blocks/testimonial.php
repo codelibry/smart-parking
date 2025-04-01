@@ -18,7 +18,7 @@ $company = get_field('testimonial__company');
                 <div class="testimonial">
                     <div class="testimonial-wrap">
                         <?php if ($quote) : ?>
-                            <?php echo esc_html($quote) ?>
+                            <?php echo $quote ?>
                         <?php endif; ?>
                     </div>
                     <p><?php echo esc_html($position); ?> | <strong><?php echo esc_html($company); ?></strong></p>

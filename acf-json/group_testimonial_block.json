@@ -1,6 +1,6 @@
 {
     "key": "group_testimonial_block",
-    "title": "Block: Tesimonial",
+    "title": "Block: Testimonial",
     "fields": [
         {
             "key": "field_testimonial_image",
@@ -47,7 +47,7 @@
             "allow_in_bindings": 1,
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_testimonial_position",
@@ -110,5 +110,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743079114
+    "modified": 1743511454
 }
