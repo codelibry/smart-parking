@@ -27,6 +27,7 @@ function codelibry_enqueue () {
   wp_enqueue_style( 'app', "{$CSS}/app.css", array(), '1.0', 'all' );
   wp_enqueue_style( 'custom', "{$CSS}/custom.css", array(), '1.0', 'all' );
   wp_enqueue_style( 'additional', "{$CSS}/additional.css", array(), '1.0', 'all' );
+  wp_enqueue_style( 'fancybox', "https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", array(), '1.0', 'all' );
 
 
   /* JavaScript */
@@ -36,37 +37,12 @@ function codelibry_enqueue () {
   wp_enqueue_script('jquery-validation-unobtrusive', "$LIB/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js", array('custom-jquery', 'jquery-validate'), '1.0', true);
   wp_enqueue_script('foundation', "$JS/foundation.js", array('custom-jquery'), '1.0', true);
   wp_enqueue_script('owl-carousel', "$JS/owl.carousel.min.js", array('custom-jquery'), '1.0', true);
-  wp_enqueue_script('app', "$JS/app.js", array('custom-jquery', 'foundation'), '1.0', true);
   wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array(), '5.0.8', true);
   wp_enqueue_script('fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), '3.5.7', true);
-  
-  
-  // Inline script for Fancybox and other JS functionality
-  wp_add_inline_script('fancybox', "
-      jQuery(document).ready(function () {
-          jQuery('.play-button').fancybox();
-      });
-      
-      jQuery('#menu-primary-menu > li').on('click', function () {
-          if (jQuery(this).hasClass('active')) {
-              jQuery(this).removeClass('active');
-          } else {
-              jQuery(this).siblings().removeClass('active');
-              jQuery(this).addClass('active');
-          }
-      });
-      
-      jQuery('.region .select-items div').on('click keyup', function () {
-          var redirectValue = jQuery('#culture-dropdown option:contains(' + jQuery(this).text() + ')').val();
-          window.location = '/' + redirectValue;
-      });
-      
-      jQuery('#mobile-culture-dropdown').change(function () {
-          var redirectValue = jQuery('#mobile-culture-dropdown option:contains(' + jQuery('#mobile-culture-dropdown option:selected').text() + ')').val();
-          window.location = '/' + redirectValue;
-      });
-  ", 'after');
 
+  wp_enqueue_script('app', "$JS/app.js", array('custom-jquery', 'foundation'), '1.0', true);
+  wp_enqueue_script('main', "$JS/main.js", array('app'), '1.0', true);
+  
 
   /* Passing PHP variables to JavaScript */
   wp_localize_script( 'main', 'codelibry',
