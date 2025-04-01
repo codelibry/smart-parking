@@ -11,4 +11,6 @@ get_template_part('blocks/breadcrumbs', null, [
     ]
 ]);
 
+get_template_part('blocks/single-hero');
+
 get_footer();
