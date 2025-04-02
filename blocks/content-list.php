@@ -1,31 +1,39 @@
 <?php
 
-$image_lg = get_field('content-list__image-lg');
-$image_sm = get_field('content-list__image-sm');
+$image_lg = get_array_value($args, 'image_lg', get_field('content-list__image-lg'));
+$image_sm = get_array_value($args, 'image_sm', get_field('content-list__image-sm'));
 
-$title = get_field('content-list__title');
-$description = get_field('content-list__description');
-$subtitle = get_field('content-list__subtitle');
+$title = get_array_value($args, 'title', get_field('content-list__title'));
+$description = get_array_value($args, 'description', get_field('content-list__description'));
+$subtitle = get_array_value($args, 'subtitle', get_field('content-list__subtitle'));
 
-$list = get_field('content-list__list');
+$list = get_array_value($args, 'list', get_field('content-list__list'));
 
-$moretext = get_field('content-list__moretext');
+$moretext = get_array_value($args, 'moretext', get_field('content-list__moretext'));
 
-$button_1 = get_field('content-list__button-1');
-$button_2 = get_field('content-list__button-2');
+$button_1 = get_array_value($args, 'button_1', get_field('content-list__button-1'));
+$button_2 = get_array_value($args, 'button_2', get_field('content-list__button-2'));
+
+$additional_classes = get_array_value($args, 'additional_classes', get_field('content-list__additional-classes'));
 
 ?>
 
-<div class="pt-100 pb-100 right-content-block" id="contentanchor">
+<div class="pb-100 right-content-block <?php echo $additional_classes ?>" id="contentanchor">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
 
             <div class="large-6 large-offset-0 medium-8 medium-offset-2 cell relative hex-graphics">
                 <img class="graphic" <?php img_src('hexagon-hollow.svg') ?>>
-                <div class="large-image" style="background-image: url(<?php echo $image_lg ?>);"></div>
-                <div class="shadow">
-                    <div class="small-image" style="background-image: url(<?php echo $image_sm ?>);"></div>
-                </div>
+                
+                <?php if($image_lg): ?>
+                    <div class="large-image" style="background-image: url(<?php echo $image_lg ?>);"></div>
+                <?php endif; ?>
+
+                <?php if($image_sm): ?>
+                    <div class="shadow">
+                        <div class="small-image" style="background-image: url(<?php echo $image_sm ?>);"></div>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="xxlarge-5 xxlarge-offset-0 xlarge-6 xlarge-offset-0 large-6 large-offset-0 medium-10 medium-offset-1 cell flex align-center space-between">

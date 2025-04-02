@@ -3,13 +3,15 @@
 $title = get_field('cta-bar__title');
 $button = get_field('cta-bar__button');
 
+$additional_classes = get_field('cta-bar__additional-classes');
+
 if(!$button) {
   return;
 }
 
 ?>
 
-<div class="pt-100 pb-100 cta-bar-block light-blue">
+<div class="pt-100 pb-100 cta-bar-block light-blue <?php echo $additional_classes ?>">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="large-12 cell flex align-center justify-center">

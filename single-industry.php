@@ -25,6 +25,7 @@ if (have_rows('testimonials-repeater')) :
             'quote' => get_sub_field('testimonial__quote'),
             'position' => get_sub_field('testimonial__position'),
             'company' => get_sub_field('testimonial__company'),
+            'additional_classes' => get_sub_field('testimonial__additional-classes'),
         ]);
 
     endwhile;
