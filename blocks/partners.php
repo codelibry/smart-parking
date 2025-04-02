@@ -10,9 +10,11 @@ $partners = get_posts([
   'order' => 'ASC'
 ]);
 
+$additional_classes = get_field('partners__additional-classes');
+
 ?>
 
-<div class="pb-100">
+<div class="pb-100 <?php echo $additional_classes ?>">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="xxlarge-12 text-center cell">
