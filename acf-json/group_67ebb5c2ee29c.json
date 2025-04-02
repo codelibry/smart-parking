@@ -204,7 +204,7 @@
         },
         {
             "key": "field_67ebdce4d7479",
-            "label": "Testimonial",
+            "label": "Testimonials",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -221,11 +221,11 @@
             "selected": 0
         },
         {
-            "key": "field_67ebdcf5d747a",
-            "label": "Testimonial",
-            "name": "testimonial",
+            "key": "field_67ece9a9c6ff8",
+            "label": "Testimonials",
+            "name": "testimonials-repeater",
             "aria-label": "",
-            "type": "clone",
+            "type": "flexible_content",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -234,13 +234,43 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_testimonial_block"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "layouts": {
+                "layout_67ece9acb4e6a": {
+                    "key": "layout_67ece9acb4e6a",
+                    "name": "testimonial",
+                    "label": "Testimonial",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67ece9cbc6ff9",
+                            "label": "Testimonial",
+                            "name": "testimonial",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_testimonial_block"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
         }
     ],
     "location": [
@@ -261,5 +291,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743517437
+    "modified": 1743579716
 }

@@ -1,9 +1,9 @@
 <?php
 
-$image = get_field('testimonial__image');
-$quote = get_field('testimonial__quote');
-$position = get_field('testimonial__position');
-$company = get_field('testimonial__company');
+$image = get_array_value($args, 'image', get_field('testimonial__image'));
+$quote = get_array_value($args, 'quote', get_field('testimonial__quote'));
+$position = get_array_value($args, 'position', get_field('testimonial__position'));
+$company = get_array_value($args, 'company', get_field('testimonial__company'));
 
 ?>
 
