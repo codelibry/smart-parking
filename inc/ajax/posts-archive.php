@@ -4,18 +4,11 @@
  * Ajax Handler
  */
 function handle_posts_ajax_request() {
-  get_posts_posts();
+  get_filtered_posts();
   wp_die();
 }
-add_action('wp_ajax_get_posts_posts', 'handle_posts_ajax_request');
-add_action('wp_ajax_nopriv_get_posts_posts', 'handle_posts_ajax_request');
-
-function handle_posts_ajax_pagination() {
-  get_posts_pagination();
-  wp_die();
-}
-add_action('wp_ajax_get_posts_pagination', 'handle_posts_ajax_pagination');
-add_action('wp_ajax_nopriv_get_posts_pagination', 'handle_posts_ajax_pagination');
+add_action('wp_ajax_get_filtered_posts', 'handle_posts_ajax_request');
+add_action('wp_ajax_nopriv_get_filtered_posts', 'handle_posts_ajax_request');
 
 
 /*
@@ -54,7 +47,7 @@ function get_filtered_posts(){
 
   $query = new WP_Query($args);
 
-  $max_pages = 5; //ceil($query->found_posts / $posts_per_page);
+  $max_pages = ceil($query->found_posts / $posts_per_page);
 
   // Get Filters
   $tags = get_terms([
@@ -64,12 +57,12 @@ function get_filtered_posts(){
   ?>
 
   <div class="xxlarge-12 mb-100 filters flex align-center justify-center cell">
-      <a href="#" class="button selected | js-filter <?php active($category, '') ?>" data-category="">
+      <a href="#" class="button | js-filter <?php active($category, '') ?>" data-c="">
           <?php _e('All', 'spt') ?>
       </a>
 
       <?php foreach ($tags as $tag): ?>
-          <a href="#" class="button hollow | js-filter <?php active($category, $tag->slug) ?>" data-category="<?php echo $tag->slug ?>">
+          <a href="#" class="button | js-filter <?php active($category, $tag->slug) ?>" data-c="<?php echo $tag->slug ?>">
               <?php echo $tag->name ?>
           </a>            
       <?php endforeach; ?>

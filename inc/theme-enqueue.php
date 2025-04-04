@@ -42,6 +42,8 @@ function codelibry_enqueue () {
 
   wp_enqueue_script('app', "$JS/app.js", array('custom-jquery', 'foundation'), '1.0', true);
   wp_enqueue_script('main', "$JS/main.js", array('app'), '1.0', true);
+
+  wp_enqueue_script('posts-ajax', "$JS/posts-ajax.js", array('app'), '1.0', true);
   
 
   /* Passing PHP variables to JavaScript */
