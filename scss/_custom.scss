@@ -964,3 +964,11 @@ footer .secondary-links a {
   background: $secondary-color;
   color: $white;
 }
+
+
+/*
+ * Contact Form
+ */
+.wpcf7 br {
+  display: none;
+}

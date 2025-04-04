@@ -1,18 +1,18 @@
 {
-    "key": "group_67eb96610c607",
-    "title": "Block: Centered Hero",
+    "key": "group_67efd08997f84",
+    "title": "Block: Contact Us",
     "fields": [
         {
-            "key": "field_67eb966151a71",
+            "key": "field_67efd089801d4",
             "label": "Title",
-            "name": "centered-hero__title",
+            "name": "contact-us__title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -24,64 +24,9 @@
             "append": ""
         },
         {
-            "key": "field_67eb967b51a72",
+            "key": "field_67efd09e801d5",
             "label": "Description",
-            "name": "centered-hero__description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 1,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_67eb968c51a73",
-            "label": "CTA Button",
-            "name": "centered-hero__button-1",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_67eb96bc51a74",
-            "label": "Video Button",
-            "name": "centered-hero__button-2",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_67ed2457144fe",
-            "label": "Additional Classes",
-            "name": "centered-hero__additional-classes",
+            "name": "contact-us__description",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -98,6 +43,56 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_67efd0ad801d6",
+            "label": "Warning",
+            "name": "contact-us__warning",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67efd0b8801d7",
+            "label": "Contact Form",
+            "name": "contact-us__form",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -118,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743769020
+    "modified": 1743769806
 }

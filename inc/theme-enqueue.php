@@ -59,3 +59,13 @@ function codelibry_enqueue () {
 }
 
 add_action('wp_enqueue_scripts', 'codelibry_enqueue');
+
+
+/*
+ * Deregister scripts/styles
+ */
+function codelibry_deregister_styles() {
+  wp_deregister_style('contact-form-7');
+}
+
+add_action('wp_print_styles', 'codelibry_deregister_styles', 100);
