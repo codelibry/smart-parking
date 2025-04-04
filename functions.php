@@ -9,5 +9,6 @@ require get_template_directory().'/inc/custom-taxonomies.php';
 require get_template_directory().'/inc/custom-menus.php';
 
 require get_template_directory().'/inc/acf.php';
-require get_template_directory().'/inc/theme-functions.php';
 require get_template_directory().'/inc/helpers.php';
+require get_template_directory().'/inc/theme-functions.php';
+require get_template_directory().'/inc/theme-ajax.php';
