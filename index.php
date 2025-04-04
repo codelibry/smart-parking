@@ -2,7 +2,7 @@
 
 <?php
 
-get_template_part('blocks/home-hero');
+echo "index.php"
 
 ?>
 
