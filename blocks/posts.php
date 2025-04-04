@@ -29,32 +29,15 @@ $posts_list = get_latest_posts(
             <div class="xxlarge-12 cell">
                 <div class="article-grid">
                     <div class="column">
-                        <?php foreach ($posts_list as $article) : ?>
-                            <?php
-                              $article_url = get_permalink($article->ID);
-                              $article_title = get_the_title($article->ID);
-                              $article_date = get_the_date('d M Y', $article->ID);
-                              $article_img_url = get_the_post_thumbnail_url($article->ID);
-                              $article_categories = get_the_terms($article->ID, 'latest-category');
-                            ?>
-
-                            <article>
-                                <a href="<?php echo esc_url($article_url); ?>">
-                                    <img src="<?php echo $article_img_url; ?>" alt="">
-                                    <h4><?php echo esc_html($article_title); ?></h4>
-                                </a>
-                                <div class="article-info">
-                                    <div class="date"><?php echo esc_html(strtoupper($article_date)); ?></div>
-                                    <div class="tags">
-                                        <?php if ($article_categories) : ?>
-                                            <?php foreach ($article_categories as $cat) : ?>
-                                                <span><?php echo esc_html($cat->name); ?></span>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </article>
-                        <?php endforeach; ?>
+                        <?php foreach ($posts_list as $post):
+                            get_template_part('template-parts/components/post-card', null, [
+                                'link' => get_permalink($post->ID),
+                                'title' => get_the_title($post->ID),
+                                'date' => get_the_date('d M Y', $post->ID),
+                                'image' => get_the_post_thumbnail_url($post->ID),
+                                'tags' => get_the_terms($post->ID, 'latest-category'),
+                            ]);
+                        endforeach; ?>
                     </div>
                 </div>
             </div>
