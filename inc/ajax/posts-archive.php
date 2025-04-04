@@ -86,19 +86,21 @@ function get_filtered_posts(){
               }; wp_reset_postdata(); ?>
           </div>
 
-          <div class="grid-x grid-padding-x filters paging pt-50 pb-50">
-              <div class="large-12 cell flex align-center justify-center">
-                  <?php
-                      echo paginate_links([
-                        'current' => $page,
-                        'total'   => $max_pages,
-                        'base' => site_url() . '/latest' . '%_%',
-                        'format' => '?pageIndex=%#%',
-                        'prev_next' => false
-                      ]);
-                  ?> 
+          <?php if($max_pages > 1): ?>
+              <div class="grid-x grid-padding-x filters paging pt-50 pb-50">
+                  <div class="large-12 cell flex align-center justify-center | paginate-links">
+                      <?php
+                          echo paginate_links([
+                            'current' => $page,
+                            'total'   => $max_pages,
+                            'base' => site_url() . '/latest' . '%_%',
+                            'format' => '?pageIndex=%#%',
+                            'prev_next' => false
+                          ]);
+                      ?> 
+                  </div>
               </div>
-          </div>
+          <?php endif; ?>
       </div>
   </div>
 

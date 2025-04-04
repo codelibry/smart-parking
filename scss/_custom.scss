@@ -864,15 +864,9 @@ footer .secondary-links a {
   }
 }
 
-.loader {
-  width: 20%;
-  text-align: center;
-  margin: 5rem auto;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Skeleton shimmer animation */
+/*
+ * Sceleton Loader
+ */
 @keyframes shimmer {
   0% {
     background-position: -400px 0;
@@ -945,3 +939,28 @@ footer .secondary-links a {
   animation: shimmer 1.5s infinite linear;
 }
 
+
+/*
+ * Pagination
+ */
+.paginate-links {
+  display: flex;
+}
+
+.page-numbers {
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  border-radius: 10em;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-numbers.current {
+  background: $secondary-color;
+  color: $white;
+}
