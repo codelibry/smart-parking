@@ -22,8 +22,8 @@
         },
         {
             "key": "field_67efcb7de191d",
-            "label": "Centered Hero",
-            "name": "centered-hero",
+            "label": "Contact Hero",
+            "name": "contact-hero",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -35,7 +35,7 @@
                 "id": ""
             },
             "clone": [
-                "group_67eb96610c607"
+                "group_67efd557ead3c"
             ],
             "display": "seamless",
             "layout": "block",
@@ -141,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743769940
+    "modified": 1743771178
 }
