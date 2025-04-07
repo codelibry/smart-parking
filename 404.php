@@ -1,35 +1,40 @@
-<?php get_header(); 
+<?php 
 
-$title                  = get_field('page404_title', 'option') ? get_field('page404_title', 'option') : __('Oops!', 'spt');
-$content                = get_field('page404_main_content', 'option') ? get_field('page404_main_content', 'option') : __('The Page you are looking for doesn\'t exist', 'spt');
-$homepage_button_label  = get_field('page404_homepage_button_label', 'option') ? get_field('page404_homepage_button_label', 'option') : __('Back To Homepage', 'spt') ;
-$shop_button_label      = get_field('page404_shop_button_label', 'option') ? get_field('page404_shop_button_label', 'option') : __('Back to Shop','spt');
+get_header(); 
+
+$title = get_field('page404_title', 'option') ? get_field('page404_title', 'option') : '404';
+$content = get_field('page404_main_content', 'option');
+$button_label = get_field('page404_homepage_button_label', 'option');
 
 ?>
 
+<div class="relative z2 pt-80 pb-40">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell hero inner-hero pt-80 pb-80 flex align-center justify-center">
+                <div class="hero-content text-center flex align-center justify-center direction-column">
+                    <?php if($title): ?>
+                        <h1 style="font-size:6rem"><?php echo $title ?></h1>
+                    <?php endif; ?>
 
+                    <?php if($content): ?>
+                        <p class="lead"><?php echo $content ?></p>
+                    <?php endif; ?>
 
-<section class="error404__wrapper | section">
-  <div class="error404__container container justify-content-center">
-
-    <div class="error404__content text-center">
-
-      <h1><?php echo $title; ?></h1>
-      <h2><?php echo $content; ?></h2>
-
+                    <div class="button-group mt-20">
+                        <?php if($button_label): ?>
+                            <a class="button black hollow" href="<?php echo home_url() ?>">
+                                <?php echo $button_label ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="error404__buttons-wrapper">
+    <img class="hex1" <?php img_src("hero-hexagons.svg") ?>>
+</div>
 
-      <a class="button button--primary" href="<?php echo get_home_url() ?>"><?php echo $homepage_button_label; ?></a>
-
-      <?php if (is_woocommerce_activated()) : ?>
-        <a class="button" href="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>"><?php echo $shop_button_label; ?></a>
-      <?php endif; ?>
-
-    </div>
-
-  </div>
-</section>
 
 <?php get_footer(); ?>
