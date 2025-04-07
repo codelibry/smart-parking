@@ -10,5 +10,7 @@ get_template_part('blocks/centered-hero');
 get_template_part('blocks/full-image');
 get_template_part('blocks/reports');
 get_template_part('blocks/members');
+get_template_part('blocks/contact-form');
+get_template_part('blocks/practices');
 
 get_footer();
