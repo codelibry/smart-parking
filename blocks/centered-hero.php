@@ -1,13 +1,12 @@
 <?php
 
-$title = get_field('centered-hero__title');
-$description = get_field('centered-hero__description');
+$title = get_array_value($args, 'title', get_field('centered-hero__title'));
+$description = get_array_value($args, 'description', get_field('centered-hero__description'));
+$additional_classes = get_array_value($args, 'additional_classes', get_field('centered-hero__additional-classes'));
 
 $button_1 = get_field('centered-hero__button-1');
 $button_2 = get_field('centered-hero__button-2');
 $button_video = get_field('centered-hero__button-video');
-
-$additional_classes = get_array_value($args, 'additional_classes', get_field('centered-hero__additional-classes'));
 
 ?>
 

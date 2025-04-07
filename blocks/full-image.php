@@ -1,8 +1,8 @@
 <?php
 
-$image = get_field('full-image__image');
+$image = get_array_value($args, 'image', get_field('full-image__image'));
 
-$additional_classes = get_field('full-image__additional-classes');
+$additional_classes = get_array_value($args, 'additional_classes', get_field('full-image__additional-classes'));
 
 if(!$image) return;
 
