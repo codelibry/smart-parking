@@ -23,6 +23,7 @@ function codelibry_setup(){
   register_nav_menus(
     array(
       'header-menu' => __('Header Menu', 'spt'),
+      'mobile-menu' => __('Mobile Menu', 'spt'),
       'footer-menu-1' => __('Footer Col 1', 'spt'),
       'footer-menu-2' => __('Footer Col 2', 'spt'),
       'footer-menu-3' => __('Footer Col 3', 'spt'),

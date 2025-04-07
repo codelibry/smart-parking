@@ -22,23 +22,12 @@ $cta_button = get_field('cta-button', 'option');
                 ]) ?>
 
                 <div class="cta-grouping flex align-center">
-                    <div class="region-mobile">
-                        <select id="mobile-culture-dropdown">
-                            <option value="uk" selected="">UK</option>
-                            <option value="de">Germany</option>
-                            <option value="au">Australia</option>
-                            <option value="nz">New Zealand</option>
-                            <option value="dk">Denmark</option>
-                        </select>
-                    </div>
-
                     <a 
                       class="mobile-menu-trigger" 
                       data-open="exampleModal1" 
                       aria-controls="exampleModal1" 
                       aria-haspopup="dialog" 
-                      tabindex="0">
-                    </a>
+                      tabindex="0"></a>
 
                     <?php if($cta_button): ?>
                         <a class="button" <?php acf_link_attrs($cta_button) ?>>

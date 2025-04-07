@@ -4,7 +4,7 @@
 
       wp_footer();    
 
-      the_field('body_scripts_bottom', 'option') 
+      the_field('body_scripts_bottom', 'option');
 
     ?>
   </body>
