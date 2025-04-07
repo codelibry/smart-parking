@@ -12,13 +12,15 @@ get_template_part('blocks/centered-hero', null, [
   'description' => get_field('policy__description')
 ]);
 
-get_template_part('blocks/full-image', null, [
-  'image' => [
-    'alt' => get_the_title(),
-    'title' => get_the_title(),
-    'url' => get_the_post_thumbnail_url(),
-  ]
-]);
+if(get_the_post_thumbnail_url()):
+  get_template_part('blocks/full-image', null, [
+    'image' => [
+      'alt' => get_the_title(),
+      'title' => get_the_title(),
+      'url' => get_the_post_thumbnail_url(),
+    ]
+  ]);
+endif;
 
 get_template_part('blocks/content');
 
