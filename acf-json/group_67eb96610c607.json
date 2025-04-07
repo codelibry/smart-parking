@@ -42,11 +42,11 @@
             "allow_in_bindings": 1,
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_67eb968c51a73",
-            "label": "CTA Button",
+            "label": "Button 1",
             "name": "centered-hero__button-1",
             "aria-label": "",
             "type": "link",
@@ -63,8 +63,25 @@
         },
         {
             "key": "field_67eb96bc51a74",
-            "label": "Video Button",
+            "label": "Button 2",
             "name": "centered-hero__button-2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67f38484aa7e5",
+            "label": "Button Video",
+            "name": "centered-hero__button-video",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -118,5 +135,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743769020
+    "modified": 1744013689
 }

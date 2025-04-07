@@ -1,6 +1,7 @@
 <?php
 
 $title = get_field('partners__title');
+$title_tag = get_field('partners__title-tag') ? get_field('partners__title-tag') : 'h5';
 
 $partners = get_posts([
   'post_type' => 'partner',
@@ -20,7 +21,7 @@ $additional_classes = get_field('partners__additional-classes');
             <div class="xxlarge-12 text-center cell">
 
                 <?php if ($title) : ?>
-                    <h5><?php echo esc_html($title); ?></h5>
+                    <<?php echo $title_tag ?>><?php echo esc_html($title); ?></<?php echo $title_tag ?>>
                 <?php endif; ?>
 
                 <div class="flex align-center justify-center flex-wrap logos">

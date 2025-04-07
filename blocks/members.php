@@ -19,12 +19,11 @@ if(!$groups || empty($groups)) {
             </div>
         <?php endif; ?>
 
-        <div class="grid-x grid-padding-x card-block mb-50">
-            <?php foreach ($groups as $group): 
-                $group_title = $group['group-title'];
-                $group_members = $group['group-members'];
-            ?>
-
+        <?php foreach ($groups as $group): 
+            $group_title = $group['group-title'];
+            $group_members = $group['group-members'];
+        ?>
+            <div class="grid-x grid-padding-x card-block mb-50">
                 <?php if($group_title): ?>
                     <div class="large-3 medium-12 flex align-top cell">
                         <h2><?php echo $group_title ?></h2>
@@ -54,8 +53,7 @@ if(!$groups || empty($groups)) {
                         <?php endforeach; ?>
                     </div>
                 </div>
-
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 </div>

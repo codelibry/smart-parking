@@ -3,6 +3,36 @@
     "title": "Block: Partners",
     "fields": [
         {
+            "key": "field_67f38bb3ee99d",
+            "label": "Title Tag",
+            "name": "partners__title-tag",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5"
+            },
+            "default_value": "h5",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_67e5295123742",
             "label": "Title",
             "name": "partners__title",
@@ -63,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743604739
+    "modified": 1744014376
 }

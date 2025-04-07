@@ -5,6 +5,7 @@ $description = get_field('centered-hero__description');
 
 $button_1 = get_field('centered-hero__button-1');
 $button_2 = get_field('centered-hero__button-2');
+$button_video = get_field('centered-hero__button-video');
 
 $additional_classes = get_array_value($args, 'additional_classes', get_field('centered-hero__additional-classes'));
 
@@ -35,11 +36,15 @@ $additional_classes = get_array_value($args, 'additional_classes', get_field('ce
                         <?php endif; ?>
 
                         <?php if($button_2): ?>
-                            <a class="play-button mt-0 m-auto" <?php acf_link_attrs($button_2) ?>>
-                                <span>
-                                    <?php echo get_inline_svg('play.svg') ?>
-                                </span> 
+                            <a class="button black hollow" <?php acf_link_attrs($button_2) ?>>
                                 <?php echo $button_2['title'] ?>
+                            </a>
+                        <?php endif; ?>
+
+                        <?php if($button_video): ?>
+                            <a class="play-button mt-0 m-auto" <?php acf_link_attrs($button_video) ?>>
+                                <span><?php echo get_inline_svg('play.svg') ?></span> 
+                                <?php echo $button_video['title'] ?>
                             </a>
                         <?php endif; ?>
                     </div>

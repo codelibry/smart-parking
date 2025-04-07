@@ -972,3 +972,46 @@ footer .secondary-links a {
 .wpcf7 br {
   display: none;
 }
+
+.wpcf7 .wpcf7-submit {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1.05em 1.5em;
+  margin: 0;
+
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 3px;
+
+  -webkit-transition: background-color .25s ease-out,color .25s ease-out;
+  transition: background-color .25s ease-out,color .25s ease-out;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  color: #fefefe;
+
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: #ff5811;
+  float: right !important;
+}
+
+.wpcf7 .wpcf7-submit:hover,
+.wpcf7 .wpcf7-submit:focus,
+.wpcf7 .wpcf7-submit:focus-visible {
+  background-color: #e74500;
+}
+
+.wpcf7 .screen-reader-response {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
