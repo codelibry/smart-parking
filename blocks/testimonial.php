@@ -7,6 +7,10 @@ $company = get_array_value($args, 'company', get_field('testimonial__company'));
 
 $additional_classes = get_array_value($args, 'additional_classes', get_field('testimonial__additional-classes'));
 
+if(!$quote) {
+  return;
+}
+
 ?>
 
 <div class="pt-100 testimonial-block <?php echo $additional_classes ?>">
