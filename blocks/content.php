@@ -1,6 +1,6 @@
 <?php
 
-$content = get_field('content__content') ? get_field('content__content') : get_the_content();
+$content = get_array_value($args, 'content', get_the_content());
 
 ?>
 
