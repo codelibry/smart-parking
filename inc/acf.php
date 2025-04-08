@@ -17,13 +17,6 @@ if (function_exists('acf_add_options_page')) {
 		'redirect' => false
 	));
 
-	// Place, where we add social media links
-	acf_add_options_sub_page(array(
-		'page_title' => 'Social Media',
-		'menu_title' => 'Social media',
-		'parent_slug' => 'site-settings',
-	));
-
 	// Allow client to add GTM, Analytics and other scripts to the head, body etc.
 	acf_add_options_sub_page(array(
 		'page_title' => 'Scripts',
