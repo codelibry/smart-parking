@@ -34,4 +34,16 @@ jQuery(function($) {
         }
     });
 
+
+    /*
+     * Appeal Reasons Dropdown
+     */
+    $('#appeal-reasons-dropdown').change(function () {
+        var selectedReasonId = $('#appeal-reasons-dropdown').val();
+        var currentId = selectedReasonId.toString().substring(selectedReasonId.lastIndexOf('-') + 1);
+
+        $('.appeal-reason-details').hide();
+        $('#appeal-body-' + currentId).fadeIn();
+    });
+
 });

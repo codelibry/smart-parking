@@ -35,7 +35,7 @@ if(!$appeals || empty($appeals)) {
                 </label>
 
                 <?php foreach($appeals as $i => $appeal): ?>
-                    <div class="appeal-reason-details" id="appeal-body-<?php echo $i + 1 ?>">
+                    <div class="appeal-reason-details" id="appeal-body-<?php echo $i + 1 ?>" style="text-align: left; display: none;">
                         <?php echo $appeal['content'] ?>
 
                         <div class="grid-x grid-padding-x align-center text-center m-t-4">
