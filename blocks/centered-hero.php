@@ -16,9 +16,7 @@ $button_video = get_field('centered-hero__button-video');
             <div class="large-12 cell hero inner-hero pt-80 pb-80 flex align-center justify-center">
                 <div class="hero-content text-center flex align-center justify-center direction-column">
                     <?php if($title): ?>
-                        <h1 class="dot">
-                            <?php echo $title ?>
-                        </h1>
+                        <h1 class="dot"><?php echo $title ?></h1>
                     <?php endif; ?>
 
                     <?php if($description): ?>

@@ -30,15 +30,23 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
 
             <div class="grid-x grid-padding-x">
                 <div class="large-6 cell">
-                    <div class="grid-x grid-padding-x" data-equalizer="o15oc9-equalizer" data-resize="ufz7qg-eq" data-mutate="wd0rhf-eq" data-events="resize">
+                    <div 
+                        class="grid-x grid-padding-x" 
+                        data-equalizer="o15oc9-equalizer" 
+                        data-resize="ufz7qg-eq" 
+                        data-mutate="wd0rhf-eq" 
+                        data-events="resize"
+                    >
                         <?php foreach ($systems as $system): ?>
                             <div class="xxlarge-6 large-6 medium-6 cell">
 
                                 <?php get_template_part('template-parts/components/system-card', null, [
                                     'link' => get_permalink($system),
-                                    'image' => get_field('system__image', $system),
                                     'title' => get_the_title($system),
-                                    'description' => get_field('system__description', $system),
+                                    'image' => get_field('system__image-secondary', $system) 
+                                      ? get_field('system__image-secondary', $system) 
+                                      : get_field('system__image', $system),
+                                    'description' => get_field('system__description-secondary', $system),
                                 ]) ?>
 
                             </div>
@@ -77,9 +85,11 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
 
                                 <?php get_template_part('template-parts/components/system-card', null, [
                                     'link' => get_permalink($system),
-                                    'image' => get_field('system__image', $system),
                                     'title' => get_the_title($system),
-                                    'description' => get_field('system__description', $system),
+                                    'image' => get_field('system__image-secondary', $system) 
+                                      ? get_field('system__image-secondary', $system) 
+                                      : get_field('system__image', $system),
+                                    'description' => get_field('system__description-secondary', $system),
                                 ]) ?>
 
                             </div>
@@ -91,4 +101,3 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
     </div>
 
 <?php endif; ?>
-

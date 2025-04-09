@@ -6,7 +6,7 @@
 .pb-30 { padding-bottom: 30px; }
 .pt-40 { padding-top: 40px; }
 .pb-40 { padding-bottom: 40px; }
-.pt-50 { padding-top: 50px; }
+body .pt-50 { padding-top: 50px; }
 .pb-50 { padding-bottom: 50px; }
 .pt-60 { padding-top: 60px; }
 .pb-60 { padding-bottom: 60px; }
@@ -67,7 +67,7 @@
 @include breakpoint(767 down) {
     .pt-30 { padding-top: 15px; }
     .pb-30 { padding-bottom: 15px; }
-    .pt-50 { padding-top: 40px; }
+    body .pt-50 { padding-top: 40px; }
     .pb-50 { padding-bottom: 40px; }
     .pt-60 { padding-top: 40px; }
     .pb-60 { padding-bottom: 40px; }
