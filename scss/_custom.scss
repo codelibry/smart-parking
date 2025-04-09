@@ -1015,3 +1015,53 @@ footer .secondary-links a {
   white-space: nowrap;
   border: 0;
 }
+
+
+/*
+ * WPML Switcher
+ */
+.wpml-ls-legacy-dropdown-click {
+  border: 1px solid #b2b2b2;
+  border-radius: 10em;
+  position: relative;
+  min-width: 110px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.wpml-ls-legacy-dropdown-click a {
+  padding: 5px 10px;
+  margin: 0;
+  border: 0;
+  font-size: .75rem;
+  color: #333f58;
+  display: flex;
+  align-items: center;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+  border-radius: 10em;
+  padding: 5px 11px;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-flag {
+  height: 12px;
+  width: 22px;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #e6e6e6;
+  margin-top: 10px;
+  left: auto;
+  right: 0;
+  z-index: 99;
+  background: #fefefe;
+  width: 100%;
+  right: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}

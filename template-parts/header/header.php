@@ -34,6 +34,8 @@ $cta_button = get_field('cta-button', 'option');
                             <?php echo $cta_button['title'] ?>
                         </a>
                     <?php endif; ?>
+
+                    <?php do_action('wpml_add_language_selector'); ?>
                 </div>
             </div>
         </div>
