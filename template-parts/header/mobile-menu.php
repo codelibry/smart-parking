@@ -15,7 +15,7 @@ $cta_button = get_field('cta-button', 'option');
         data-resize="exampleModal1" 
         style="display: none; top: 0px;" 
         tabindex="-1"
-    >
+    ></div>
 
     <?php
         wp_nav_menu([
@@ -28,9 +28,11 @@ $cta_button = get_field('cta-button', 'option');
         ]);
     ?>
 
-    <a class="button expanded" <?php acf_link_attrs($cta_button) ?>>
-        <?php echo $cta_button['title'] ?>
-    </a>
+    <?php if($cta_button): ?>
+        <a class="button expanded" <?php acf_link_attrs($cta_button) ?>>
+            <?php echo $cta_button['title'] ?>
+        </a>
+    <?php endif; ?>
 
     <button class="close-button" data-close="" aria-label="Close modal" type="button">
         <span aria-hidden="true">×</span>

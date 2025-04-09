@@ -22,13 +22,6 @@ $cta_button = get_field('cta-button', 'option');
                 ]) ?>
 
                 <div class="cta-grouping flex align-center">
-                    <a 
-                      class="mobile-menu-trigger" 
-                      data-open="exampleModal1" 
-                      aria-controls="exampleModal1" 
-                      aria-haspopup="dialog" 
-                      tabindex="0"></a>
-
                     <?php if($cta_button): ?>
                         <a class="button" <?php acf_link_attrs($cta_button) ?>>
                             <?php echo $cta_button['title'] ?>
@@ -36,6 +29,13 @@ $cta_button = get_field('cta-button', 'option');
                     <?php endif; ?>
 
                     <?php do_action('wpml_add_language_selector'); ?>
+
+                    <a 
+                      class="mobile-menu-trigger" 
+                      data-open="exampleModal1" 
+                      aria-controls="exampleModal1" 
+                      aria-haspopup="dialog" 
+                      tabindex="0"></a>
                 </div>
             </div>
         </div>
