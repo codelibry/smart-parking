@@ -8,7 +8,8 @@ $systems = get_posts([
   'post_status' => 'publish',
   'posts_per_page' => -1,
   'order_by' => 'date',
-  'order' => 'ASC'
+  'order' => 'ASC',
+  'suppress_filters' => false
 ])
 
 ?>

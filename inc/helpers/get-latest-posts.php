@@ -6,6 +6,7 @@ function get_latest_posts($post_type = 'post', $count = 3) {
       'post_status' => 'publish',
       'posts_per_page' => $count,
       'order_by' => 'date',
-      'order' => 'DESC'
+      'order' => 'DESC',
+      'suppress_filters' => false
   ]);
 }

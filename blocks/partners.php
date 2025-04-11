@@ -8,7 +8,8 @@ $partners = get_posts([
   'post_status' => 'publish',
   'posts_per_page' => -1,
   'order_by' => 'date',
-  'order' => 'ASC'
+  'order' => 'ASC',
+  'suppress_filters' => false
 ]);
 
 $additional_classes = get_field('partners__additional-classes');
