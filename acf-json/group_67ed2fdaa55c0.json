@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -34,8 +35,51 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67eb96610c607"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_67f8db19836a9",
+            "label": "Full Image",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67f8daed836a8",
+            "label": "Full Image",
+            "name": "full-image",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_67ebd0bf9dea0"
             ],
             "display": "seamless",
             "layout": "block",
@@ -56,6 +100,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -74,6 +119,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67ebdac95953b"
             ],
@@ -96,6 +142,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -114,6 +161,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_testimonial_block"
             ],
@@ -136,6 +184,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -154,8 +203,51 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67e529517f9d6"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_67f8db39836aa",
+            "label": "Contact Form",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67f8db43836ab",
+            "label": "Contact Form",
+            "name": "contact-form",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_67efd08997f84"
             ],
             "display": "seamless",
             "layout": "block",
@@ -181,5 +273,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743597717
+    "acfml_field_group_mode": "advanced",
+    "modified": 1744362337
 }
