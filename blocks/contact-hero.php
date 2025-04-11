@@ -6,6 +6,10 @@ $description = get_field('contact-hero__description');
 $button_1 = get_field('contact-hero__button-1');
 $button_2 = get_field('contact-hero__button-2');
 
+if(!$title) {
+  return;
+}
+
 ?>
 
 <div class="relative z1">
