@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67efcb70e191c",
-            "label": "Hero",
+            "label": "Contact Hero",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -34,8 +35,51 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67efd557ead3c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_67f8e30d0a527",
+            "label": "Contact Hero (Secondary)",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67f8e3180a528",
+            "label": "Contact Hero (Secondary)",
+            "name": "contact-hero-secondary",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_67f8e1b681440"
             ],
             "display": "seamless",
             "layout": "block",
@@ -56,6 +100,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -74,6 +119,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67efcb0c20315"
             ],
@@ -96,6 +142,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -114,6 +161,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67efd08997f84"
             ],
@@ -141,5 +189,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743771178
+    "acfml_field_group_mode": "advanced",
+    "modified": 1744364368
 }
