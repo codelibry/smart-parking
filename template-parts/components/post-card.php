@@ -10,7 +10,13 @@ $tags = get_array_value($args, 'tags');
 
 <article>
     <a href="<?php echo esc_url($link); ?>">
-        <img src="<?php echo $image; ?>" alt="">
+        <?php if($image): ?>
+            <img 
+              src="<?php echo $image; ?>" 
+              alt="<?php echo $title ?>" 
+              style="aspect-ratio:430/170; object-fit:cover;"
+            >
+        <?php endif; ?>
         <h4><?php echo esc_html($title); ?></h4>
     </a>
     <div class="article-info">
