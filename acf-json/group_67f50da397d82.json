@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67f50da3c7f86",
-            "label": "Hero",
+            "label": "Two Columns Hero",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,13 +16,14 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
         },
         {
             "key": "field_67f50dc2c7f87",
-            "label": "Hero",
+            "label": "Two Columns Hero",
             "name": "parking-hero",
             "aria-label": "",
             "type": "clone",
@@ -34,8 +35,51 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67f4e1ff6ad85"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_67fe3cec23605",
+            "label": "Centered Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67fe3d0c23606",
+            "label": "Centered Hero",
+            "name": "centered-hero",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_67eb96610c607"
             ],
             "display": "seamless",
             "layout": "block",
@@ -56,6 +100,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -74,6 +119,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67f50c113fb1a"
             ],
@@ -101,5 +147,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744113264
+    "acfml_field_group_mode": "advanced",
+    "modified": 1744715057
 }
