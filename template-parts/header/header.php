@@ -1,7 +1,9 @@
 <?php
 
 $site_logo = get_field('site-logo', 'option');
-$cta_button = get_field('cta-button', 'option');
+
+$header_button_1 = get_field('header-button-1', 'option');
+$header_button_2 = get_field('header-button-2', 'option');
 
 ?>
 
@@ -22,9 +24,15 @@ $cta_button = get_field('cta-button', 'option');
                 ]) ?>
 
                 <div class="cta-grouping flex align-center">
-                    <?php if($cta_button): ?>
-                        <a class="button" <?php acf_link_attrs($cta_button) ?>>
-                            <?php echo $cta_button['title'] ?>
+                    <?php if($header_button_1): ?>
+                        <a class="button black hollow" <?php acf_link_attrs($header_button_1) ?>>
+                            <?php echo $header_button_1['title'] ?>
+                        </a>
+                    <?php endif; ?>
+              
+                    <?php if($header_button_2): ?>
+                        <a class="button" <?php acf_link_attrs($header_button_2) ?>>
+                            <?php echo $header_button_2['title'] ?>
                         </a>
                     <?php endif; ?>
 
