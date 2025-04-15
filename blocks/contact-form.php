@@ -20,11 +20,12 @@ if(!$form_id) {
                 <?php endif; ?>
 
                 <?php if($description): ?>
-                    <p class="mb-50"><?php echo $description ?></p>
+                    <p><?php echo $description ?></p>
                 <?php endif; ?>
 
                 <?php if($warning): ?>
-                    <p style="color: red; margin: 1rem; font-size: larger;"><?php echo $warning ?></p>
+                    <p class="mt-50" style="color: red; margin: 1rem; font-size: larger;"><?php echo $warning ?></p>
+                    <p></p>
                 <?php endif; ?>
             </div>
         </div>
