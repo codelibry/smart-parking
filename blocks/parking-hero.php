@@ -10,6 +10,10 @@ $col_2_title = get_field('parking-hero__col-2-title');
 $col_2_button_1 = get_field('parking-hero__col-2-button-1');
 $col_2_button_2 = get_field('parking-hero__col-2-button-2');
 
+if(!$title) {
+  return;
+}
+
 ?>
 
 <div class="relative z1">
