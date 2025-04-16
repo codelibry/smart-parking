@@ -18,7 +18,7 @@ $additional_classes = get_array_value($args, 'additional_classes', get_field('co
 
 $content_left = get_array_value($args, 'is_content_left', get_field('content-list__is-content-left'));
 
-if(!$title) {
+if(!$image_lg && !$image_sm && !$title && !$subtitle) {
   return;
 }
 
