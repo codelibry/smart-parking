@@ -7,7 +7,7 @@ $button_1 = get_field('centered-hero__button-1');
 $button_2 = get_field('centered-hero__button-2');
 $button_video = get_field('centered-hero__button-video');
 
-$show_scroller = get_field('centered-hero__show-scroller');
+$show_scroller = get_array_value($args, 'show_scroller', get_field('centered-hero__show-scroller'));
 $additional_classes = get_array_value($args, 'additional_classes', get_field('centered-hero__additional-classes'));
 
 if(!$title) {
