@@ -15,7 +15,7 @@ get_template_part('blocks/single-hero');
 
 get_template_part('blocks/full-image');
 
-get_template_part('blocks/content-list', null, [
+get_template_part('blocks/content-list-dup', null, [
   'image_lg' => get_field('primary-content-list_content-list__image-lg'),
   'image_sm' => get_field('primary-content-list_content-list__image-sm'),
   'title' => get_field('primary-content-list_content-list__title'),
@@ -31,7 +31,7 @@ get_template_part('blocks/content-list', null, [
 
 get_template_part('blocks/cta-bar');
 
-get_template_part('blocks/content-list', null, [
+get_template_part('blocks/content-list-dup', null, [
   'image_lg' => get_field('secondary-content-list_content-list__image-lg'),
   'image_sm' => get_field('secondary-content-list_content-list__image-sm'),
   'title' => get_field('secondary-content-list_content-list__title'),
