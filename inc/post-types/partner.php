@@ -19,10 +19,10 @@ function codelibry_partner_post_type() {
     'has_archive'           => false,
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
-    'rewrite'               => [
+    /*'rewrite'               => [
       'slug' => 'partners',
       'with_front' => false
-    ]
+    ]*/
   ];
 
   register_post_type('partner', $args);

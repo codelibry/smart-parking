@@ -19,10 +19,10 @@ function codelibry_system_post_type() {
     'has_archive'           => false,
     'menu_icon'             => 'dashicons-admin-site-alt',
     'capability_type'       => 'page',
-    'rewrite'               => [
+    /*'rewrite'               => [
       'slug' => 'our-system',
       'with_front' => false
-    ]
+    ]*/
   ];
 
   register_post_type('system', $args);
