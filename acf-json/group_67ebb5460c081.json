@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "return_format": "array",
             "library": "all",
             "min_width": "",
@@ -42,6 +43,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
@@ -63,6 +65,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
@@ -84,6 +87,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "return_format": "array",
             "allow_in_bindings": 0
         },
@@ -101,6 +105,25 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6800b86e26eb2",
+            "label": "Button Video",
+            "name": "single-hero__button_3",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
             "return_format": "array",
             "allow_in_bindings": 0
         }
@@ -123,5 +146,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743500951
+    "acfml_field_group_mode": "advanced",
+    "modified": 1744877723
 }
