@@ -4,8 +4,13 @@
 
       wp_footer();    
 
-      the_field('body_scripts_bottom', 'option');
+      echo get_field('body_scripts_bottom', 'option');
 
     ?>
   </body>
+
+  <?php
+      echo get_field('footer_scripts', 'option');
+  ?>
+
 </html> 

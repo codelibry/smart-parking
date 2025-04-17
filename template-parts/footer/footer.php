@@ -112,4 +112,3 @@ $copyright = get_field('footer__copyright', 'option');
         </div>
     </div>
 </footer>
-
