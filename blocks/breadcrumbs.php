@@ -22,7 +22,8 @@ $links = get_array_value($args, 'links', []);
                     <?php endforeach; ?>
 
                     <li>
-                        <span class="show-for-sr">Current: </span> <?php the_title() ?>
+                        <span class="show-for-sr"><?php _e('Current:', 'spt') ?></span> 
+                        <?php the_title() ?>
                     </li>                    
                 </ul>
             </nav>
