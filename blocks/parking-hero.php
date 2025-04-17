@@ -10,6 +10,8 @@ $col_2_title = get_field('parking-hero__col-2-title');
 $col_2_button_1 = get_field('parking-hero__col-2-button-1');
 $col_2_button_2 = get_field('parking-hero__col-2-button-2');
 
+$show_scroller = get_array_value($args, 'show_scroller', get_field('centered-hero__show-scroller'));
+
 if(!$title) {
   return;
 }
@@ -69,6 +71,9 @@ if(!$title) {
                     </div>
                 </div>
 
+                <?php if($show_scroller): ?>
+                    <div class="scroller"><div class="dot-flashing"></div></div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
