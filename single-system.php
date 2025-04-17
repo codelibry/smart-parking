@@ -28,7 +28,7 @@ if (have_rows('content-list-repeater')) :
             'moretext' => get_sub_field('content-list__moretext'),
             'button_1' => get_sub_field('content-list__button-1'),
             'button_2' => get_sub_field('content-list__button-2'),
-            'additional_classes' => get_field('content-list__additional-classes')
+            'additional_classes' => get_sub_field('content-list__additional-classes')
         ]);
 
     endwhile;
