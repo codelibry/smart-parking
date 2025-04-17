@@ -18,6 +18,7 @@ $tags = get_array_value($args, 'tags');
             >
         <?php endif; ?>
         <h4><?php echo esc_html($title); ?></h4>
+        <p></p>
     </a>
     <div class="article-info">
         <div class="date"><?php echo esc_html(strtoupper($date)); ?></div>
