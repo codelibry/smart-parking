@@ -5,6 +5,11 @@ $title = get_field('single-hero__title');
 $description = get_field('single-hero__description');
 $button_1 = get_field('single-hero__button-1');
 $button_2 = get_field('single-hero__button-2');
+$button_3 = get_field('single-hero__button-3');
+
+if(!$title) {
+  return;
+}
 
 ?>
 
@@ -34,6 +39,14 @@ $button_2 = get_field('single-hero__button-2');
                                 <?php echo $button_2['title'] ?>
                             </a>
                         <?php endif; ?>
+
+                        <?php if($button_3): ?>
+                            <a class="play-button mt-0 m-auto" <?php acf_link_attrs($button_3) ?>>
+                                <span><img <?php img_src('play.svg') ?>></span>
+                                <?php echo $button_3['title'] ?>
+                            </a>
+                        <?php endif; ?>
+
                     </div>
                 </div>
 
