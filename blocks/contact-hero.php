@@ -6,6 +6,8 @@ $description = get_field('contact-hero__description');
 $button_1 = get_field('contact-hero__button-1');
 $button_2 = get_field('contact-hero__button-2');
 
+$show_scroller = get_array_value($args, 'show_scroller', get_field('contact-hero__show-scroller'));
+
 if(!$title) {
   return;
 }
@@ -44,7 +46,10 @@ if(!$title) {
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="scroller"><div class="dot-flashing"></div></div>
+
+                <?php if($show_scroller): ?>
+                    <div class="scroller"><div class="dot-flashing"></div></div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

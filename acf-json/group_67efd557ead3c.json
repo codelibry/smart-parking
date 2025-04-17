@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
@@ -37,6 +38,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "allow_in_bindings": 0,
             "tabs": "all",
@@ -58,6 +60,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "return_format": "array",
             "allow_in_bindings": 0
         },
@@ -75,8 +78,31 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "return_format": "array",
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6800d632a7f02",
+            "label": "Show Scroller",
+            "name": "contact-hero__show-scroller",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -97,5 +123,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743771156
+    "acfml_field_group_mode": "advanced",
+    "modified": 1744885335
 }
