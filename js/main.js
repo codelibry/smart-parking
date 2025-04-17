@@ -11,7 +11,17 @@ jQuery(function($) {
     /*
      * Header Mega-Menu
      */
-    $('#menu-primary-menu > li').on('click', function () {
+    $(document).on('click', function (e) {
+        // Check if the click happened outside the menu item
+        if (!$(e.target).closest('#menu-primary-menu > li').length) {
+            $('#menu-primary-menu > li').removeClass('active');
+        }
+    });
+
+    // Prevent the menu item click from bubbling up to the document
+    $('#menu-primary-menu > li').on('click', function (e) {
+        e.stopPropagation();
+
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
@@ -27,10 +37,10 @@ jQuery(function($) {
     $('.moreless-button').click(function () {
         $('.moretext').slideToggle();
 
-        if ($('.moreless-button').text().trim() == "Read more") {
-            $(this).html("Read less")
+        if ($('.moreless-button').text().trim() == codelibry.read_more) {
+            $(this).html(codelibry.read_less)
         } else {
-            $(this).html("Read more")
+            $(this).html(codelibry.read_more)
         }
     });
 

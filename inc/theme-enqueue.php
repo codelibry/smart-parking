@@ -52,7 +52,10 @@ function codelibry_enqueue () {
       'ajax_url' => admin_url( 'admin-ajax.php' ),
       'ajax_nonce' => wp_create_nonce( "secure_nonce_name" ),
       'site_url' => get_site_url(),
-      'theme_url' => get_template_directory_uri()
+      'theme_url' => get_template_directory_uri(),
+
+      'read_more' => __('Read more', 'spt'),
+      'read_less' => __('Read less', 'spt'),
     )
   );
 
