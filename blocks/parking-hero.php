@@ -27,43 +27,45 @@ if(!$title) {
                     <?php endif; ?>
 
                     <div class="grid-x grid-padding-x align-center m-t-4">
-                        <?php if($col_1_title): ?>
-                            <div class="cell medium-6 small-11">
+                        <div class="cell medium-6 small-11">
+                            <?php if($col_1_title): ?>
                                 <p class="cta-title"><?php echo $col_1_title ?></p>
-                                <div class="cta-buttons">
-                                    <?php if($col_1_button_1): ?>
-                                        <a class="button" <?php acf_link_attrs($col_1_button_1) ?>>
-                                            <?php echo $col_1_button_1['title'] ?>
-                                        </a>
-                                    <?php endif; ?>
+                            <?php endif; ?>
 
-                                    <?php if($col_1_button_2): ?>
-                                        <a class="button hollow" <?php acf_link_attrs($col_1_button_2) ?>>
-                                            <?php echo $col_1_button_2['title'] ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
+                            <div class="cta-buttons">
+                                <?php if($col_1_button_1): ?>
+                                    <a class="button" <?php acf_link_attrs($col_1_button_1) ?>>
+                                        <?php echo $col_1_button_1['title'] ?>
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php if($col_1_button_2): ?>
+                                    <a class="button hollow" <?php acf_link_attrs($col_1_button_2) ?>>
+                                        <?php echo $col_1_button_2['title'] ?>
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                        <?php endif; ?>
+                        </div>
 
-                        <?php if($col_2_title): ?>
-                            <div class="cell medium-6 small-11">
+                        <div class="cell medium-6 small-11">
+                            <?php if($col_2_title): ?>
                                 <p class="cta-title"><?php echo $col_2_title ?></p>
-                                <div class="cta-buttons">
-                                    <?php if($col_2_button_1): ?>
-                                        <a class="button" <?php acf_link_attrs($col_2_button_1) ?>>
-                                            <?php echo $col_2_button_1['title'] ?>
-                                        </a>
-                                    <?php endif; ?>
+                            <?php endif; ?>
 
-                                    <?php if($col_2_button_2): ?>
-                                        <a class="button hollow" <?php acf_link_attrs($col_2_button_2) ?>>
-                                            <?php echo $col_2_button_2['title'] ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
+                            <div class="cta-buttons">
+                                <?php if($col_2_button_1): ?>
+                                    <a class="button" <?php acf_link_attrs($col_2_button_1) ?>>
+                                        <?php echo $col_2_button_1['title'] ?>
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php if($col_2_button_2): ?>
+                                    <a class="button hollow" <?php acf_link_attrs($col_2_button_2) ?>>
+                                        <?php echo $col_2_button_2['title'] ?>
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                        <?php endif; ?>
+                        </div>
                     </div>
                 </div>
 
