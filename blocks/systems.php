@@ -28,12 +28,19 @@ if(!$systems || empty($systems)) {
         <?php foreach ($systems as $system): ?>
             <div class="xxlarge-3 large-4 medium-6 cell">
 
-                <?php get_template_part('template-parts/components/system-card', null, [
-                    'link' => get_permalink($system),
-                    'title' => get_the_title($system),
-                    'image' => get_field('system__image', $system), 
-                    'description' => get_field('system__description', $system),
-                ]) ?>
+                <?php 
+
+                    $system_id = $system['id'];
+                    $description = $system['description'];
+
+                    get_template_part('template-parts/components/system-card', null, [
+                        'link' => get_permalink($system_id),
+                        'title' => get_the_title($system_id),
+                        'image' => get_field('system__image', $system_id), 
+                        'description' => $description,
+                  ]); 
+
+                ?>
 
             </div>
         <?php endforeach; ?>

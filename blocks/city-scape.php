@@ -40,13 +40,14 @@ $systems = get_posts([
                     <div class="grid-x grid-padding-x flex justify-center flex-wrap card-block" data-equalizer>
                         <?php foreach ($systems as $system) : ?>
                             <div class="xxlarge-3 large-4 medium-6 cell">
-                                <a href="<?php the_permalink($system) ?>">
-                                    <div class="card large text-center">
-                                      <img class="mb-30" <?php acf_image_attrs(get_field('system__image', $system)) ?> style="max-width:100px;">
-                                        <h4 class="mb-10" data-equalizer-watch><?php echo get_the_title($system) ?></h4>
-                                        <p><small><?php echo get_field('system__description', $system) ?></small></p>
-                                    </div>
-                                </a>
+
+                                <?php get_template_part('template-parts/components/system-card', null, [
+                                    'link' => get_permalink($system),
+                                    'title' => get_the_title($system),
+                                    'image' => get_field('system__image', $system), 
+                                    'description' => get_field('system__description', $system),
+                                ]) ?>
+
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -55,4 +56,3 @@ $systems = get_posts([
         <?php endif; ?>
     </div>
 </div>
-
