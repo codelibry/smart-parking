@@ -28,7 +28,7 @@ $section_classes = $is_left_content
                         <?php endif; ?>
 
                         <?php if($title): ?>
-                            <h2><?php echo $title ?></h2>
+                            <h2 style="word-break: break-word"><?php echo $title ?></h2>
                         <?php endif; ?>
 
                         <?php if($description): ?>
@@ -74,7 +74,7 @@ $section_classes = $is_left_content
                         <?php endif; ?>
 
                         <?php if($title): ?>
-                            <h2><?php echo $title ?></h2>
+                            <h2 style="word-break: break-word"><?php echo $title ?></h2>
                         <?php endif; ?>
 
                         <?php if($description): ?>

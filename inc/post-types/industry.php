@@ -19,10 +19,6 @@ function codelibry_industry_post_type() {
     'has_archive'           => false,
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
-    /*'rewrite'               => [
-      'slug' => 'industries',
-      'with_front' => false
-    ]*/
   ];
 
   register_post_type('industry', $args);

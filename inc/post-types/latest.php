@@ -20,10 +20,6 @@ function codelibry_latest_post_type() {
     'has_archive'           => false,
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
-    /*'rewrite'               => [
-      'slug' => 'latest',
-      'with_front' => false
-    ]*/
   ];
 
   register_post_type('latest', $args);
