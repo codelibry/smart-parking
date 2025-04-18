@@ -11,8 +11,8 @@ if(!$image) return;
 <div class="relative z1 full-image-block <?php echo $additional_classes ?>">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
-            <div class="small-12 cell text-center" style="max-height:736px;">
-                <img <?php acf_image_attrs($image) ?> style="width:100%;height:100%;object-fit:cover;aspect-ratio:1572/736">
+            <div class="small-12 cell text-center" style="max-height: 736px; aspect-ratio: 1572 / 736;">
+                <img <?php acf_image_attrs($image) ?> style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
