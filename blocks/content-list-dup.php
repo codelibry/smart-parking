@@ -22,9 +22,6 @@ if(!$image_lg && !$image_sm && !$title && !$subtitle) {
   return;
 }
 
-$image_lg = is_int((int) $image_lg) ? wp_get_attachment_image_url($image_lg) : $image_lg;
-$image_sm = is_int((int) $image_sm) ? wp_get_attachment_image_url($image_sm) : $image_sm;
-
 ?>
 
 <?php if(!$content_left): ?>
