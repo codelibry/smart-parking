@@ -36,7 +36,6 @@ jQuery(function($) {
      */
     $('.moreless-button').click(function () {
         $('.moretext').slideToggle();
-
         if ($('.moreless-button').text().trim() == codelibry.read_more) {
             $(this).html(codelibry.read_less)
         } else {
