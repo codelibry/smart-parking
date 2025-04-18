@@ -22,6 +22,9 @@ if(!$image_lg && !$image_sm && !$title && !$subtitle) {
   return;
 }
 
+$image_lg = wp_get_attachment_image_url($image_lg, 'large');
+$image_sm = wp_get_attachment_image_url($image_sm, 'large');
+
 ?>
 
 <?php if(!$content_left): ?>
