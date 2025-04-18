@@ -34,6 +34,8 @@ if (have_rows('content-list-repeater')) :
     endwhile;
 endif;
 
+get_template_part('blocks/contact-form');
+
 get_template_part('blocks/related-posts');
 
 get_footer();
