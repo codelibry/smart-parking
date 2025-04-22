@@ -161,7 +161,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "layouts": {
                 "layout_67ecfbda68f0e": {
                     "key": "layout_67ecfbda68f0e",
@@ -183,7 +183,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 3,
+                            "wpml_cf_preferences": 2,
                             "clone": [
                                 "group_67ebdac95953b"
                             ],
@@ -263,5 +263,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1745307439
+    "modified": 1745307695
 }
