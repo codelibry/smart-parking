@@ -35,11 +35,15 @@ jQuery(function($) {
      * Read More/Less Toggle
      */
     $('.moreless-button').click(function () {
-        $('.moretext').slideToggle();
-        if ($('.moreless-button').text().trim() == codelibry.read_more) {
-            $(this).html(codelibry.read_less)
+        const $button = $(this);
+        const $moreText = $button.prev('.moretext');
+
+        $moreText.slideToggle();
+
+        if ($button.text().trim() === codelibry.read_more) {
+            $button.html(codelibry.read_less);
         } else {
-            $(this).html(codelibry.read_more)
+            $button.html(codelibry.read_more);
         }
     });
 
