@@ -41,7 +41,7 @@ if(!$groups || empty($groups)) {
 
                             <div class="large-6 medium-6 cell">
                                 <div class="card profile large text-center">
-                                    <img class="photo" <?php acf_image_attrs($image) ?>>
+                                    <img class="photo" <?php acf_image_attrs($image) ?> style="object-fit:cover; object-position:top;">
                                     <h4 class="mb-10">
                                         <?php echo $name ?>
                                         <small><?php echo $position ?></small>
