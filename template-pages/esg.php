@@ -15,7 +15,7 @@ get_template_part('blocks/content', null, [
 if (have_rows('content-list-repeater')) :
     while (have_rows('content-list-repeater')) : the_row();
 
-        get_template_part('blocks/content-list', null, [
+        get_template_part('blocks/content-list-dup', null, [
             'image_lg' => get_sub_field('content-list__image-lg'),
             'image_sm' => get_sub_field('content-list__image-sm'),
             'title' => get_sub_field('content-list__title'),
