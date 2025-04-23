@@ -4,7 +4,7 @@ $cta_button = get_field('cta-button', 'option');
 
 ?>
 
-<div class="reveal-overlay" style="display: none;">
+<div class="reveal-overlay">
     <div 
         class="reveal mobile-menu" 
         id="exampleModal1" 
@@ -15,7 +15,7 @@ $cta_button = get_field('cta-button', 'option');
         data-resize="exampleModal1" 
         style="display: none; top: 0px;" 
         tabindex="-1"
-    ></div>
+    >
 
     <?php
         wp_nav_menu([
