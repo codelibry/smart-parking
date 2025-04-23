@@ -35,7 +35,7 @@ function codelibry_header_menu_modification($items, $args) {
 
         // Check if it has a mega menu
         if ($has_mega_menu) {
-            $item->title = '<a class="dropdown"><strong>' . esc_html($title) . '</strong></a>';
+            $item->title = '<a class="dropdown"><strong>' . $item->title . '</strong></a>';
             $item->classes[] = 'has-children';
 
             $mega_menu_html = '<div class="pane"><div class="flex width-100">';
