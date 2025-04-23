@@ -81,3 +81,9 @@ function custom_latest_post_link($post_link, $post) {
     return $post_link;
 }
 add_filter('post_type_link', 'custom_latest_post_link', 10, 2);
+
+
+function my_custom_favicon() {
+    echo '<link rel="icon" href="' . get_img_src('favicon/favicon.ico') .'" type="image/x-icon">';
+}
+add_action( 'wp_head', 'my_custom_favicon' );
