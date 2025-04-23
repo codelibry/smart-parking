@@ -20,7 +20,7 @@ if(!$title) {
 
                 <div class="hero-content flex align-left justify-center direction-column medium-center medium-flex-center">
                     <?php if($title): ?>
-                        <h1 class="dot" style="word-wrap: break-word;"><?php echo $title ?></h1>
+                        <h1 class="dot"><?php echo $title ?></h1>
                     <?php endif; ?>
 
                     <?php if($description): ?>

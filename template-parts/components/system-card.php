@@ -14,7 +14,7 @@ $description = get_array_value($args, 'description');
         <?php endif; ?>
 
         <?php if($title): ?>
-            <h4 class="mb-10" data-equalizer-watch="" style="height: auto; word-break: break-word;">
+            <h4 class="mb-10" data-equalizer-watch="">
                 <?php echo $title ?>
             </h4>
         <?php endif; ?>
