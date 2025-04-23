@@ -1028,30 +1028,35 @@ footer .secondary-links a {
   border: 1px solid #b2b2b2;
   border-radius: 10em;
   position: relative;
-  min-width: 110px;
   width: auto;
   padding: 0;
   margin: 0;
   margin-left: 20px;
+  height: 27px;
+  display: flex;
+  align-items: center;
 }
 
 .wpml-ls-legacy-dropdown-click a {
-  padding: 5px 10px;
+  padding: 5px 11px;
   margin: 0;
   border: 0;
   font-size: .75rem;
   color: #333f58;
   display: flex;
   align-items: center;
+  transition: none;
 }
 
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
   border-radius: 10em;
-  padding: 5px 11px;
+  padding: 6px 50px 6px 10px;
+  background: url(../img/globe.svg) right 26px center no-repeat;
+  min-width: 110px;
 }
 
 .wpml-ls-legacy-dropdown-click .wpml-ls-flag {
-  height: 12px;
+  height: 11px;
   width: 22px;
 }
 
@@ -1070,6 +1075,45 @@ footer .secondary-links a {
   overflow: hidden;
 }
 
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+  position: absolute;
+  content: "";
+  background: url(../img/angle-down-small.svg) center center no-repeat;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 5px;
+  transform: translateY(-50%);
+  border: none;
+}
+
 .otgs-development-site-front-end {
   display: none !important;
+}
+
+@include breakpoint(small down) { 
+  .wpml-ls-legacy-dropdown-click .wpml-ls-flag {
+    display: none;
+  }
+  
+  .wpml-ls-legacy-dropdown-click a {
+    font-size: 9px;
+  }
+  
+  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    padding: 7px 16px 6px 10px;
+    background: none;
+    min-width: 75px;
+  }
+
+  .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:before {
+    content: url(../img/globe.svg);
+    margin-right: 10px;
+    display: block;
+    margin-top: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-150%, 10%);
+  }
 }
