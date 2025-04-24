@@ -74,9 +74,16 @@ add_action('init', 'custom_latest_rewrite_rules');
 
 function custom_latest_post_link($post_link, $post) {
     if ($post->post_type === 'latest') {
+        $current_locale = get_locale();
+
+
         $post_type = __('latest', 'spt');
         $year = get_the_date('Y', $post);
+
+        switch_to_locale('en_US');
         $month = strtolower(get_the_date('F', $post));
+        switch_to_locale($current_locale);
+
         return home_url("/$post_type/$year/$month/{$post->post_name}/");
     }
     return $post_link;
