@@ -74,9 +74,10 @@ add_action('init', 'custom_latest_rewrite_rules');
 
 function custom_latest_post_link($post_link, $post) {
     if ($post->post_type === 'latest') {
+        $post_type = __('latest', 'spt');
         $year = get_the_date('Y', $post);
         $month = strtolower(get_the_date('F', $post));
-        return home_url("/latest/$year/$month/{$post->post_name}/");
+        return home_url("/$post_type/$year/$month/{$post->post_name}/");
     }
     return $post_link;
 }
