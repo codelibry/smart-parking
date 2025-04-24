@@ -57,6 +57,10 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	}
 }
 
+function my_custom_favicon() {
+    echo '<link rel="icon" href="' . get_img_src('favicon/favicon.ico') .'" type="image/x-icon">';
+}
+add_action( 'wp_head', 'my_custom_favicon' );
 
 /**
  * =================================================================
@@ -77,7 +81,7 @@ function custom_latest_post_link($post_link, $post) {
         $current_locale = get_locale();
 
 
-        $post_type = __('latest', 'spt');
+        $post_type = 'latest';
         $year = get_the_date('Y', $post);
 
         switch_to_locale('en_US');
@@ -89,9 +93,3 @@ function custom_latest_post_link($post_link, $post) {
     return $post_link;
 }
 add_filter('post_type_link', 'custom_latest_post_link', 10, 2);
-
-
-function my_custom_favicon() {
-    echo '<link rel="icon" href="' . get_img_src('favicon/favicon.ico') .'" type="image/x-icon">';
-}
-add_action( 'wp_head', 'my_custom_favicon' );
