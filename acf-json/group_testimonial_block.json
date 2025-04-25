@@ -34,7 +34,7 @@
             "label": "Quote",
             "name": "testimonial__quote",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -45,11 +45,11 @@
             },
             "wpml_cf_preferences": 3,
             "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 1,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_testimonial_position",
@@ -137,5 +137,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1745503476
+    "modified": 1745574044
 }
