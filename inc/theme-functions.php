@@ -62,34 +62,56 @@ function my_custom_favicon() {
 }
 add_action( 'wp_head', 'my_custom_favicon' );
 
+
 /**
  * =================================================================
  * Rewrite 'latest' CPT url
  * =================================================================
  */
 function custom_latest_rewrite_rules() {
-    add_rewrite_rule(
-        '^latest/([0-9]{4})/([a-z]+)/([^/]+)/?$',
-        'index.php?post_type=latest&name=$matches[3]',
-        'top'
-    );
+    $langs = [
+        'uk' => 'latest',
+        'ua' => 'latest',
+        'au' => 'latest',
+        'nz' => 'latest',
+        'dk' => 'senest',
+        'de' => 'news-und-fallstudien',
+    ];
+
+    foreach ($langs as $code => $base) {
+        add_rewrite_rule(
+            "^{$base}/([0-9]{4})/([a-zA-Z]+)/([^/]+)/?$",
+            'index.php?post_type=latest&name=$matches[3]',
+            'top'
+        );
+    }
 }
 add_action('init', 'custom_latest_rewrite_rules');
 
-function custom_latest_post_link($post_link, $post) {
+function custom_latest_post_permalink($permalink, $post) {
+    $langs = [
+        'uk' => 'latest',
+        'ua' => 'latest',
+        'au' => 'latest',
+        'nz' => 'latest',
+        'dk' => 'senest',
+        'de' => 'news-und-fallstudien',
+    ];
+
     if ($post->post_type === 'latest') {
-        $current_locale = get_locale();
-
-
-        $post_type = 'latest';
+        $language = apply_filters('wpml_current_language', null) ?: 'uk'; // Fallback to 'uk' if no language
+        $base = isset($langs[$language]) ? $langs[$language] : $langs['uk'];
         $year = get_the_date('Y', $post);
-
-        switch_to_locale('en_US');
+		
+        do_action('wpml_switch_language', 'uk');
         $month = strtolower(get_the_date('F', $post));
-        switch_to_locale($current_locale);
+        do_action('wpml_switch_language', $language);
+		
+        $title = $post->post_name;
 
-        return home_url("/$post_type/$year/$month/{$post->post_name}/");
+        $permalink = home_url("/{$base}/{$year}/{$month}/{$title}/");
     }
-    return $post_link;
+
+    return $permalink;
 }
-add_filter('post_type_link', 'custom_latest_post_link', 10, 2);
+add_filter('post_type_link', 'custom_latest_post_permalink', 10, 2);
