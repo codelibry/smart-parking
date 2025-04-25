@@ -1122,14 +1122,14 @@ footer .secondary-links a {
 /*
  * Single Latest
  */
-.single-latest .article-info {
+.content-latest .article-info {
   display: block;
 }
 
-.single-latest .article-info *:is(h1, h2, h3, h4, h5, h6) {
+.content-latest .article-info *:is(h1, h2, h3, h4, h5, h6) {
   margin-top: 1.5em;
 }
 
-.single-latest .article-info *:is(h3, h4, h5, h6) {
+.content-latest .article-info *:is(h3, h4, h5, h6) {
   margin-top: 1em;
 }
