@@ -57,6 +57,12 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	}
 }
 
+
+/**
+ * =================================================================
+ * Custom favicon
+ * =================================================================
+ */
 function my_custom_favicon() {
     echo '<link rel="icon" href="' . get_img_src('favicon/favicon.ico') .'" type="image/x-icon">';
 }
@@ -115,3 +121,16 @@ function custom_latest_post_permalink($permalink, $post) {
     return $permalink;
 }
 add_filter('post_type_link', 'custom_latest_post_permalink', 10, 2);
+
+
+/**
+ * =================================================================
+ * get the excerpt only if it exists
+ * =================================================================
+ */
+add_filter('get_the_excerpt', function ($excerpt, $post) {
+    if (empty($post->post_excerpt)) {
+        return '';
+    }
+    return $excerpt;
+}, 10, 2);

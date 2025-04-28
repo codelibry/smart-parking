@@ -15,7 +15,7 @@ get_template_part('blocks/latest-hero');
 
 get_template_part('blocks/content-latest');
 
-echo '<div style="max-width:1067px;margin-inline:auto;">';
+echo '<div style="max-width:1067px;margin-inline:auto;" class="pb-50">';
 
 get_template_part('blocks/full-image', null, [
   'image' => [

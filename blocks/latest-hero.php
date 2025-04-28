@@ -13,7 +13,9 @@ $tags = get_the_terms(get_the_ID(), 'latest-category');
             <div class="large-6 cell pt-80 pb-80 flex align-center justify-left medium-flex-center">
                 <div class="hero-content flex align-left justify-center direction-column medium-center medium-flex-center">
                     <h1 class="dot"><?php echo $title ?></h1>
-                    <p class="lead"></p>
+                    <p class="lead">
+                        <?php echo get_the_excerpt() ?>
+                    </p>
                     <div class="article-info">
                         <div class="date">
                             <?php echo strtoupper($date); ?>
