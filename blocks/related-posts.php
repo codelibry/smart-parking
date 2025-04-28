@@ -30,6 +30,7 @@ $posts_list = get_latest_posts(
                                 'date' => get_the_date('d M Y', $post->ID),
                                 'image' => get_the_post_thumbnail_url($post->ID),
                                 'tags' => get_the_terms($post->ID, 'latest-category'),
+                                'summary' => get_the_excerpt($post->ID),
                             ]);
                         endforeach; ?>
                     </div>

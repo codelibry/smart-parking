@@ -13,7 +13,7 @@ function codelibry_latest_post_type() {
   $args = [
     'labels'                => $labels,
     'label'                 => 'Latest',
-    'supports'              => ['title', 'editor', 'thumbnail'],
+    'supports'              => ['title', 'editor', 'thumbnail', 'excerpt'],
     'menu_position'         => 5,
     'query_var'             => true,
     'public'                => true,

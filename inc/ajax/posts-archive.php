@@ -81,6 +81,7 @@ function get_filtered_posts(){
                           'date' => get_the_date('d M Y', get_the_ID()),
                           'image' => get_the_post_thumbnail_url(get_the_ID()),
                           'tags' => get_the_terms(get_the_ID(), 'latest-category'),
+                          'summary' => get_the_excerpt(get_the_ID()),
                       ]);
                   }
               }; wp_reset_postdata(); ?>

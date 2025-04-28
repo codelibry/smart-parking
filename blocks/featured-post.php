@@ -19,6 +19,7 @@ $post_categories = get_the_terms($post_id, 'latest-category');
                     <article>
                         <a href="<?php echo esc_url($post_url) ?>">
                             <h2><?php echo esc_html($post_title) ?></h2>
+                            <p><?php echo esc_html(get_the_excerpt($post_id)) ?></p>
                         </a>
                         <div class="article-info mb-30">
                             <div class="date"><?php echo esc_html(strtoupper($post_date)) ?></div>
