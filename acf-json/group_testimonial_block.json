@@ -49,7 +49,7 @@
             "allow_in_bindings": 1,
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_testimonial_position",
@@ -137,5 +137,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1745574044
+    "modified": 1745840473
 }
