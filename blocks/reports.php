@@ -39,7 +39,9 @@ if(!$reports || empty($reports)) {
                                 <h4 class="mb-10" data-equalizer-watch="" style="height: auto;"><?php echo $report['title'] ?></h4>
                             <?php endif; ?>
 
-                            <?php if($report['title']): ?>
+                            <?php if($report['description']): ?>
+                                <p><small><?php echo $report['description'] ?></small></p>
+                            <?php elseif($report['title']): ?>
                                 <p><small><?php echo __('Click here to view our', 'spt') . ' ' . $report['title'] ?></small></p>
                             <?php endif; ?>
                         </div>
