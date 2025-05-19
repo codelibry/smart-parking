@@ -43,6 +43,18 @@ function get_filtered_posts(){
     'posts_per_page' => $posts_per_page,
     'tax_query' => $tax_query,
     'paged' => (int) $page,
+    'meta_query' => [
+      'relation' => 'OR',
+      [
+        'key'     => 'sticky_post',
+        'value'   => '1',
+        'compare' => '!=',
+      ],
+      [
+        'key'     => 'sticky_post',
+        'compare' => 'NOT EXISTS',
+      ],
+    ],
   ];
 
   $query = new WP_Query($args);
