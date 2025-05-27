@@ -771,6 +771,7 @@ footer {
   .grid-two {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
 
     .cell {
       width: 100%;
@@ -784,7 +785,6 @@ footer {
   @include breakpoint(small down) {
     .grid-two {
       grid-template-columns: 1fr;
-      gap: 40px;
     }
   }
 }
