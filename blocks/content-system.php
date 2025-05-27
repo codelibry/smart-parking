@@ -16,7 +16,7 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
         <?php endif; ?>
 
         <div class="grid-container">
-            <div class="grid-x grid-padding-x">
+            <div class="grid-x grid-padding-x grid-two">
                 <div class="large-5 cell">
                     <?php if($title): ?>
                         <h2><?php echo $title ?></h2>
@@ -31,7 +31,7 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
             <div class="grid-x grid-padding-x">
                 <div class="large-6 cell">
                     <div 
-                        class="grid-x grid-padding-x" 
+                        class="grid-x grid-padding-x grid-two" 
                         data-equalizer="o15oc9-equalizer" 
                         data-resize="ufz7qg-eq" 
                         data-mutate="wd0rhf-eq" 
@@ -79,7 +79,7 @@ $is_content_left = get_array_value($args, 'is_content_left', get_field('content-
 
             <div class="grid-x grid-padding-x">
                 <div class="large-6 large-offset-6 cell">
-                    <div class="grid-x grid-padding-x flex flex-wrap justify-right">
+                    <div class="grid-x grid-padding-x flex flex-wrap justify-right grid-two">
                         <?php foreach ($systems as $system): ?>
                             <div class="xxlarge-6 large-6 medium-6 cell">
 

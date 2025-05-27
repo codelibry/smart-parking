@@ -758,8 +758,36 @@ footer {
     .grid-container { position: relative; z-index: 2; }
 }
 
-.system-block-left .graphic { right: 10%; }
-.system-block-right .graphic { left: 10%; }
+.system-block-left .graphic { 
+  right: 10%; 
+}
+
+.system-block-right .graphic { 
+  left: 10%; 
+}
+
+.system-block-left,
+.system-block-right {
+  .grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .cell {
+      width: 100%;
+    }
+
+    .card {
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(small down) {
+    .grid-two {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}
 
 //MAP BLOCKS
 .map-block { background-image: url(../img/map1.svg); background-position: left center; background-repeat: no-repeat; background-size: auto 70%; 
