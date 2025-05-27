@@ -789,6 +789,32 @@ footer {
   }
 }
 
+
+// Members
+.members {
+  .grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+
+    .cell {
+      width: 100%;
+    }
+
+    .card.profile {
+      height: 85%;
+    }
+  }
+
+  @include breakpoint(small down) {
+    .grid-two {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}
+
+
 //MAP BLOCKS
 .map-block { background-image: url(../img/map1.svg); background-position: left center; background-repeat: no-repeat; background-size: auto 70%; 
     @include breakpoint(small down) { background-position: top center; position:relative; background-size: auto 300px;

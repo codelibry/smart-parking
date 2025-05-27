@@ -9,7 +9,7 @@ if(!$groups || empty($groups)) {
 
 ?>
 
-<div class="pt-100 pb-50 relative light-blue">
+<div class="pt-100 pb-50 relative light-blue | members">
     <div class="grid-container relative z2">
         <?php if($title): ?>
             <div class="grid-x grid-padding-x pb-60">
@@ -31,7 +31,7 @@ if(!$groups || empty($groups)) {
                 <?php endif; ?>
 
                 <div class="large-9 medium-12 cell">
-                    <div class="grid-x grid-padding-x">
+                    <div class="grid-x grid-padding-x grid-two">
                         <?php foreach ($group_members as $member): 
                             $image = $member['image'];
                             $name = $member['name'];
