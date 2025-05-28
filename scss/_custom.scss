@@ -91,7 +91,7 @@ body .pt-50 { padding-top: 50px; }
 }
 
 html { max-width: 1920px; margin: 0 auto; background: #ccc; }
-body { background: $white; }
+body { background: $white; overflow-x: hidden; }
 
 //HELPER CLASSES
 .flex { display: flex; }
@@ -1195,5 +1195,21 @@ footer .secondary-links a {
 .career-card {
   &__summary {
     margin-bottom: 22px;
+  }
+}
+
+
+/*
+ * Career Page
+ */
+.career {
+  .full-image-block .grid-container {
+    padding: 0;
+  }
+
+  @media screen and (min-width: 767px) {
+    .full-image-block__image {
+      aspect-ratio: 1920 / 600 !important;
+    }
   }
 }
