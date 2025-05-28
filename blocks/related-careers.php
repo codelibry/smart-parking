@@ -36,7 +36,7 @@ $posts_list = get_latest_posts(
                                 'image' => get_the_post_thumbnail_url($post->ID),
                                 'summary' => get_the_excerpt($post->ID),
                             ]);
-                        endforeach; ?>
+                        endforeach; wp_reset_postdata(); ?>
                     </div>
                 </div>
             </div>
