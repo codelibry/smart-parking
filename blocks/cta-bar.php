@@ -1,11 +1,11 @@
 <?php
 
-$title = get_field('cta-bar__title');
-$button = get_field('cta-bar__button');
+$cta_title = get_field('cta-bar__title');
+$cta_button = get_field('cta-bar__button');
 
 $additional_classes = get_field('cta-bar__additional-classes');
 
-if(!$button) {
+if(!$cta_button) {
   return;
 }
 
@@ -15,15 +15,15 @@ if(!$button) {
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="large-12 cell flex align-center justify-center">
-                <?php if($title): ?>
+                <?php if($cta_title): ?>
                     <h3 class="mb-0">
-                        <?php echo $title ?>
+                        <?php echo $cta_title ?>
                     </h3>
                 <?php endif; ?>
 
-                <?php if($button): ?>
-                    <a class="button" <?php acf_link_attrs($button) ?>>
-                        <?php echo $button['title'] ?>
+                <?php if($cta_button): ?>
+                    <a class="button" <?php acf_link_attrs($cta_button) ?>>
+                        <?php echo $cta_button['title'] ?>
                     </a>
                 <?php endif; ?>
             </div>
