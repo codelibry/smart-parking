@@ -1,9 +1,9 @@
 <?php
 
-$title = get_field('contact-us__title');
-$description = get_field('contact-us__description');
-$warning = get_field('contact-us__warning');
-$form_id = get_field('contact-us__form');
+$title = get_array_value($args, 'title', get_field('contact-us__title'));
+$description = get_array_value($args, 'description', get_field('contact-us__description'));
+$warning = get_array_value($args, 'warning', get_field('contact-us__warning'));
+$form_id = get_array_value($args, 'form_id', get_field('contact-us__form'));
 
 if(!$form_id) {
   return;

@@ -1204,12 +1204,35 @@ footer .secondary-links a {
  */
 .career {
   .full-image-block .grid-container {
+    max-width: 100%;
     padding: 0;
   }
 
   @media screen and (min-width: 767px) {
     .full-image-block__image {
       aspect-ratio: 1920 / 600 !important;
+    }
+  }
+}
+
+
+/*
+ * Career Form
+ */
+.career-form {
+  input,
+  textarea {
+    padding: 1rem 1.5625rem;
+
+    border: none;
+    background: $white;
+    color: $black;
+
+    font-size: 24px;
+    font-family: $header-font-family;
+
+    &::placeholder {
+      color: $black;
     }
   }
 }
