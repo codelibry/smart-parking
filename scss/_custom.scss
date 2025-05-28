@@ -1187,3 +1187,13 @@ footer .secondary-links a {
 .content-latest .article-info *:is(h3, h4, h5, h6) {
   margin-top: 1em;
 }
+
+
+/*
+ * Career Card
+ */
+.career-card {
+  &__summary {
+    margin-bottom: 22px;
+  }
+}

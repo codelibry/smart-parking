@@ -4,7 +4,7 @@ $careers_title = get_field('careers__title');
 $careers_button = get_field('careers__button');
 
 $posts_list = get_latest_posts(
-  $post_type = 'latest', 
+  $post_type = 'career', 
   $count = 3 
 );
 
@@ -30,12 +30,10 @@ $posts_list = get_latest_posts(
                 <div class="article-grid">
                     <div class="column">
                         <?php foreach ($posts_list as $post):
-                            get_template_part('template-parts/components/post-card', null, [
+                            get_template_part('template-parts/components/career-card', null, [
                                 'link' => get_permalink($post->ID),
                                 'title' => get_the_title($post->ID),
-                                'date' => get_the_date('d M Y', $post->ID),
                                 'image' => get_the_post_thumbnail_url($post->ID),
-                                'tags' => get_the_terms($post->ID, 'latest-category'),
                                 'summary' => get_the_excerpt($post->ID),
                             ]);
                         endforeach; ?>
