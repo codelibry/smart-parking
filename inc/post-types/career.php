@@ -19,6 +19,7 @@ function codelibry_career_post_type() {
     'has_archive'           => false,
     'menu_icon'             => 'dashicons-admin-site',
     'capability_type'       => 'page',
+    'show_in_rest'          => true
   ];
 
   register_post_type('career', $args);

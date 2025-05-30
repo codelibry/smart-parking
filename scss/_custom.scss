@@ -1329,3 +1329,90 @@ footer .secondary-links a {
   }
 
 }
+
+
+/*
+ * Career Content
+ */
+.content-career {
+  font-size: 20px;
+  color: rgba(51, 63, 88, 1);
+
+  p, ul {
+    line-height: 1.5;
+  }
+
+  & > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  & > * {
+    margin-bottom: 1em;
+  }
+
+  .wp-block-heading {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .wp-block-image,
+  .wp-block-video,
+  .wp-block-code,
+  .wp-block-preformatted,
+  .wp-block-verse,
+  .wp-block-table,
+  .wp-block-categories,
+  .wp-block-latest-posts,
+  .wp-block-embed {
+    margin-top: 2rem !important;
+    margin-block: 3rem !important;
+  }
+
+  .wp-block-list {
+    font-family: var(--body-font);
+
+
+    * {
+      margin-bottom: 0;
+    }
+
+    * + * {
+      margin-top: 0.6rem;
+    }
+  }
+
+  .wp-element-caption {
+    margin-top: 0.6rem;
+  }
+
+  .wp-block-columns {
+    column-gap: 2rem;
+    row-gap: 0;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .wp-block-latest-posts * + * {
+    margin-top: 0.6rem;
+  }
+
+  .wp-block-latest-posts li a {
+    margin-right: 0.4rem;
+  }
+
+  .wp-block-code code {
+    word-break: initial;
+    word-wrap: initial;
+    white-space: pre;
+    overflow: auto;
+  }
+
+  @include breakpoint(small down) { 
+    .wp-block-columns {
+      flex-wrap: wrap;
+    }
+  }
+}
