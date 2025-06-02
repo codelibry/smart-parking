@@ -1261,6 +1261,16 @@ footer .secondary-links a {
 
   p {
     margin-bottom: 1rem;
+    color: $white;
+  }
+
+  .wpcf7-response-output,
+  .wpcf7-not-valid-tip {
+    color: $white;
+  }
+
+  label:has(.wpcf7-not-valid-tip) {
+    border: 2px solid red;
   }
 
   /*
