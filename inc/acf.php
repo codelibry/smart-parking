@@ -44,4 +44,11 @@ if (function_exists('acf_add_options_page')) {
 		'menu_title' => 'Footer Settings',
 		'parent_slug' => 'site-settings',
 	));
+
+	// Single Career Settings
+	acf_add_options_sub_page(array(
+		'page_title' => 'Single Career Settings',
+		'menu_title' => 'Single Career Settings',
+		'parent_slug' => 'site-settings',
+	));
 }
