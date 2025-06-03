@@ -1221,12 +1221,20 @@ footer .secondary-links a {
  * Career Hero
  */
 .career-hero {
-  h1 {
-    font-size: 56px;
-  }
-
   a:hover {
     opacity: 0.8;
+  }
+
+  @media screen and (min-width: 40em) {
+    h1 {
+      font-size: 2.8125rem;
+    }
+  }
+
+  @media screen and (min-width: 90em) {
+    h1 {
+      font-size: 56px;
+    }
   }
 }
 
@@ -1274,6 +1282,10 @@ footer .secondary-links a {
 
   textarea {
     height: 120px;
+  }
+
+  input[type="submit"] {
+    color: $white !important;
   }
 
   p {
@@ -1328,6 +1340,7 @@ footer .secondary-links a {
     font-size: 24px;
     font-family: $header-font-family;
     height: 4rem;
+    gap: 1rem;
 
     &::placeholder {
       color: var(--color-input);
@@ -1347,6 +1360,16 @@ footer .secondary-links a {
 
     .wpcf7-form-control-wrap {
       display: none;
+    }
+
+    &.file-attached {
+      .file-label {
+        display: none;
+      }
+
+      .filename-display {
+        content: 'File attached';
+      }
     }
   }
 

@@ -33,3 +33,35 @@ if(!$form_id) {
         <?php echo do_shortcode("[contact-form-7 id='$form_id']"); ?>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const fileInputs = document.querySelectorAll('input[type="file"]');
+
+  fileInputs.forEach(function (fileInput) {
+    const labelWrapper = fileInput.closest('label');
+
+    // Skip if the file input isn't inside a label
+    if (!labelWrapper) return;
+
+    // Create the filename display element
+    const filenameDisplay = document.createElement('span');
+    filenameDisplay.className = 'filename-display';
+    labelWrapper.appendChild(filenameDisplay);
+
+    // Add change event to update filename
+    fileInput.addEventListener('change', function () {
+      if (fileInput.files.length > 0) {
+        labelWrapper.classList.add('file-attached');
+
+        // Show first 8 characters of the file name only
+        const fullName = fileInput.files[0].name;
+        filenameDisplay.textContent = fullName.slice(0, 20) + '...';
+      } else {
+        labelWrapper.classList.remove('file-attached');
+        filenameDisplay.textContent = '';
+      }
+    });
+  });
+});
+</script>
