@@ -1218,9 +1218,25 @@ footer .secondary-links a {
 
 
 /*
+ * Career Hero
+ */
+.career-hero {
+  h1 {
+    font-size: 56px;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+/*
  * Career Form
  */
 .career-form {
+  margin: 0;
+  --color-input: #000;
+
   & > .cell {
     width: 100%;
     max-width: 888px;
@@ -1244,11 +1260,11 @@ footer .secondary-links a {
     padding: 1rem 1.5625rem;
     border: none;
     background: $white;
-    color: $black;
+    color: var(--color-input) !important;
     font-size: 24px;
     font-family: $header-font-family;
     &::placeholder {
-      color: $black;
+      color: var(--color-input);
     }
   }
 
@@ -1308,13 +1324,13 @@ footer .secondary-links a {
     padding: 1rem 1.5625rem;
     border: none;
     background: $white;
-    color: $black;
+    color: var(--color-input);
     font-size: 24px;
     font-family: $header-font-family;
     height: 4rem;
 
     &::placeholder {
-      color: $black;
+      color: var(--color-input);
     }
 
     &::after {
@@ -1323,6 +1339,10 @@ footer .secondary-links a {
       top: 50%;
       right: 26px;
       transform: translateY(-40%);
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
 
     .wpcf7-form-control-wrap {
@@ -1339,7 +1359,7 @@ footer .secondary-links a {
     margin-block: 1rem 2rem;
   }
   
-  @include breakpoint(small down) { 
+  @include breakpoint(767 down) { 
     & > .cell {
       margin-top: 40px;
     }

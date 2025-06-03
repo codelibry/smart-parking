@@ -8,7 +8,7 @@ $post_title = urlencode(get_the_title());
 
 ?>
 
-<div class="relative z2">
+<div class="relative z2 | career-hero">
     <div class="grid-container">
         <div class="grid-x grid-padding-x hero inner-hero flex align-center">
             <div class="large-6 cell pt-80 pb-80 flex align-center justify-left medium-flex-center">
