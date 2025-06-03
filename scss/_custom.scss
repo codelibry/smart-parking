@@ -1,3 +1,7 @@
+body {
+  caret-color: $black;
+}
+
 //Padding
 .p-0 { padding:0 !important; }
 .pt-20 { padding-top: 20px; }
@@ -1365,10 +1369,6 @@ footer .secondary-links a {
     &.file-attached {
       .file-label {
         display: none;
-      }
-
-      .filename-display {
-        content: 'File attached';
       }
     }
   }
