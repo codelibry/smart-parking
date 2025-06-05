@@ -9,7 +9,7 @@ if(!$reports || empty($reports)) {
 
 ?>
 
-<div class="pt-100 pb-100 light-blue">
+<div class="pt-100 pb-100 light-blue | reports">
     <div class="grid-container">
         <?php if($title): ?>
             <div class="grid-x grid-padding-x pb-30">

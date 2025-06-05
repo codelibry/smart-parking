@@ -1518,3 +1518,13 @@ footer .secondary-links a {
   margin-top: 2rem;
   color: $white;
 }
+
+
+/*
+ * Reports Block Fixes
+ */
+.reports {
+  .card.large {
+    height: calc(100% - 30px);
+  }
+}
