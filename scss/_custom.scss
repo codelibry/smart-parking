@@ -823,7 +823,7 @@ footer {
 
 
 //MAP BLOCKS
-.map-block { background-image: url(../img/map1.svg); background-position: left center; background-repeat: no-repeat; background-size: auto 70%; 
+.map-block { background-image: url(../img/map1.svg); background-position: left center; background-repeat: no-repeat; background-size: auto 60%; 
     @include breakpoint(small down) { background-position: top center; position:relative; background-size: auto 300px;
                                       .grid-x { margin-top: 330px; }
     }
