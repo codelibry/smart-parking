@@ -1423,7 +1423,8 @@ footer .secondary-links a {
 /*
  * Career Content
  */
-.content-career {
+.content-career,
+.content-latest {
   font-size: 20px;
   color: rgba(51, 63, 88, 1);
 
@@ -1439,7 +1440,8 @@ footer .secondary-links a {
     margin-bottom: 1em;
   }
 
-  .wp-block-heading {
+  .wp-block-heading,
+  h1, h2, h3, h4, h5, h6 {
     margin-top: 3rem;
     margin-bottom: 2rem;
   }
@@ -1457,7 +1459,7 @@ footer .secondary-links a {
     margin-block: 3rem !important;
   }
 
-  .wp-block-list {
+  .wp-block-list, ul {
     font-family: var(--body-font);
 
 
@@ -1470,7 +1472,7 @@ footer .secondary-links a {
     }
   }
 
-  .wp-element-caption {
+  .wp-element-caption, caption {
     margin-top: 0.6rem;
   }
 
