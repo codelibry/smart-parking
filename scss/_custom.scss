@@ -238,7 +238,7 @@ textarea { height: 200px; }
 }
 
 //HEADER
-header { background-color: $white; position: relative; z-index: 9999;
+header { position: sticky; top: 0; background-color: $white; z-index: 9999;
     .menu { position: static;
         li { padding: 10px 15px; }
         a { color: $black; font-size: 17px; padding:0; 
@@ -465,7 +465,7 @@ footer {
     .hero-image {  max-width:auto; height: 361px; top: 230px; display: flex; justify-content: flex-end; 
         svg {  height: 361px; }
     }
-    .hero .button-group { display: flex; flex-wrap: nowrap; margin-bottom: 280px; }
+    .hero .button-group { display: flex; margin-bottom: 280px; }
     .play-button {  font-size: 14px;
         span { width: 45px; height: 40px; background-size: 45px 40px; margin-right: 12px; }
     }
