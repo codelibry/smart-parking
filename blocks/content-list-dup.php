@@ -73,9 +73,6 @@ $image_sm = wp_get_attachment_image_url($image_sm, 'large');
                             <p class="moretext">
                                 <?php echo $moretext ?>
                             </p>
-                            <a class="moreless-button">
-                                <?php _e('Read more', 'spt') ?>
-                            </a>                      
                         <?php endif; ?>
 
                         <div class="button-group">
@@ -129,9 +126,6 @@ $image_sm = wp_get_attachment_image_url($image_sm, 'large');
                             <p class="moretext">
                                 <?php echo $moretext ?>
                             </p>
-                            <a class="moreless-button">
-                                <?php _e('Read more', 'spt') ?>
-                            </a>                      
                         <?php endif; ?>
 
                         <div class="button-group">

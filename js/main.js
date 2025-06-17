@@ -18,7 +18,10 @@ jQuery(function($) {
         }
     });
 
-    // Prevent the menu item click from bubbling up to the document
+
+    /*
+     * Prevent the menu item click from bubbling up to the document
+     */
     $('header .menu > li').on('click', function (e) {
         e.stopPropagation();
 
@@ -27,23 +30,6 @@ jQuery(function($) {
         } else {
             $(this).siblings().removeClass('active');
             $(this).addClass('active');
-        }
-    });
-
-
-    /*
-     * Read More/Less Toggle
-     */
-    $('.moreless-button').click(function () {
-        const $button = $(this);
-        const $moreText = $button.prev('.moretext');
-
-        $moreText.slideToggle();
-
-        if ($button.text().trim() === codelibry.read_more) {
-            $button.html(codelibry.read_less);
-        } else {
-            $button.html(codelibry.read_more);
         }
     });
 
