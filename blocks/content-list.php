@@ -70,9 +70,9 @@ $image_sm = wp_get_attachment_image_url($image_sm, 'large');
                         <?php endif; ?>
 
                         <?php if($moretext): ?>
-                            <p class="moretext">
+                            <div class="moretext">
                                 <?php echo $moretext ?>
-                            </p>
+                            </div>
                         <?php endif; ?>
 
                         <div class="button-group">
@@ -123,9 +123,9 @@ $image_sm = wp_get_attachment_image_url($image_sm, 'large');
                         <?php endif; ?>
 
                         <?php if($moretext): ?>
-                            <p class="moretext">
+                            <div class="moretext">
                                 <?php echo $moretext ?>
-                            </p>
+                            </div>
                         <?php endif; ?>
 
                         <div class="button-group">
