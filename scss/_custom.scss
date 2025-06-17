@@ -717,7 +717,7 @@ footer {
 }
 
 //TICK LIST
-.tick-list { margin:0 0 20px; padding:0;
+.tick-list { margin:0 0 40px; padding:0;
     li { list-style: none; margin:0 0 8px 0; padding:0 0 0 35px; position: relative; font-size: 18px;
         &:before { content:""; width: 16px; height: 11px; background: url(../img/tick-list.svg) center center no-repeat; position: absolute; left:0; margin: auto; top:7px; bottom:auto; }
     }
