@@ -34,7 +34,7 @@ if(!$practices || empty($practices)) {
         <?php foreach ($practices as $practice): ?>
 
             <div class="large-4 medium-6 cell">
-                <a href="<?php echo $practice['link'] ?>">
+                <a href="<?php echo $practice['link'] ?>" target="_blank">
                     <div class="card w-icon">
                         <?php if($practice['image']): ?>
                             <img <?php acf_image_attrs($practice['image']) ?>>

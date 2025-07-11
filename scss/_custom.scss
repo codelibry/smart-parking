@@ -341,7 +341,7 @@ header { position: sticky; top: 0; background-color: $white; z-index: 9999;
         &:after { content:""; width: 24px; height: 11px; position: absolute; top:-11px; left: 0; right: 0; margin: auto; background: url(../img/dropdown-pointer.svg) center center no-repeat; } 
     }
     .signposts { width:65%; background: $light-blue; padding: 40px 35px 20px 35px; display: flex; justify-content: space-between; flex-wrap: wrap;
-        a { display: flex; align-items: center; font-family: $header-font-family; color: $black; margin-bottom: 20px; width: 50%;
+        a { display: flex; align-items: center; font-family: $header-font-family; color: $black; margin-bottom: 20px; width: 49%;
             img { width:30px; margin-right: 15px; filter: grayscale(100%); }
             @include breakpoint(large up) {
                 &:hover { text-decoration: underline; color: $primary-color; 
