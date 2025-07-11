@@ -102,6 +102,10 @@ function custom_latest_post_permalink($permalink, $post) {
         'nz' => 'latest',
         'dk' => 'senest',
         'de' => 'news-und-fallstudien',
+
+        'ch-de' => 'news-und-fallstudien',
+        'ch-it' => 'news-e-casi-di-studio',
+        'ch-fr' => 'actualites',
     ];
 
     if ($post->post_type === 'latest') {
