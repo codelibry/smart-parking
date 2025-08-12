@@ -131,6 +131,60 @@ add_filter('post_type_link', 'custom_latest_post_permalink', 10, 2);
 
 /**
  * =================================================================
+ * Rewrite 'career' CPT url
+ * =================================================================
+ */
+function custom_career_rewrite_rules() {
+    $langs = [
+        'uk' => 'careers',
+        'ua' => 'careers',
+        'au' => 'careers',
+        'nz' => 'careers',
+        'dk' => 'karriere',
+        'de' => 'karriere',
+        'ch-de' => 'karriere',
+        'ch-it' => 'carriera',
+        'ch-fr' => 'carriere',
+    ];
+
+    foreach ($langs as $code => $base) {
+        add_rewrite_rule(
+            "^{$base}/([^/]+)/?$",
+            'index.php?post_type=career&name=$matches[1]',
+            'top'
+        );
+    }
+}
+add_action('init', 'custom_career_rewrite_rules');
+
+function custom_career_post_permalink($permalink, $post) {
+    $langs = [
+        'uk' => 'careers',
+        'ua' => 'careers',
+        'au' => 'careers',
+        'nz' => 'careers',
+        'dk' => 'karriere',
+        'de' => 'karriere',
+        'ch-de' => 'karriere',
+        'ch-it' => 'carriera',
+        'ch-fr' => 'carriere',
+    ];
+
+    if ($post->post_type === 'career') {
+        $language = apply_filters('wpml_current_language', null) ?: 'uk'; // Fallback to 'uk' if no language
+        $base = isset($langs[$language]) ? $langs[$language] : $langs['uk'];
+        $title = $post->post_name;
+
+        $permalink = home_url("/{$base}/{$title}/");
+    }
+
+    return $permalink;
+}
+add_filter('post_type_link', 'custom_career_post_permalink', 10, 2);
+
+
+/**
+ * =================================================================
  * get the excerpt only if it exists
  * =================================================================
  */
