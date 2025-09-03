@@ -2,7 +2,7 @@
 
 $title = get_field('features__title');
 $description = get_field('features__description');
-$button = get_field('features__button');
+$button = get_field('features__link');
 $features = get_field('features__list');
 
 ?>
@@ -21,6 +21,12 @@ $features = get_field('features__list');
                           <?php echo $description ?>
                         </div>
                     <?php endif; ?>
+
+                    <div class="button-group">
+                        <?php if ($button): ?>
+                            <a <?php acf_link_attrs($button); ?> class="button"><?php echo esc_html($button['title']); ?></a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
 

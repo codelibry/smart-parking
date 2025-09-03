@@ -4,14 +4,15 @@ $form = get_field('form-hero__form');
 $title = get_field('form-hero__title');
 $form_title = get_field('form-hero__form-title');
 $description = get_field('form-hero__description');
+$button = get_field('form-hero__button');
 
 ?>
 
 <div class="relative z2 pt-80 pb-80 mobile-section">
     <div class="grid-container">
-        <div class="grid-x grid-padding-x form-hero inner-hero flex align-center">
+        <div class="grid-x grid-padding-x form-hero flex align-center">
             <div class="large-5 cell flex align-center justify-left medium-flex-center">
-                <div class="hero-content flex align-left justify-center direction-column medium-center medium-flex-center">
+                <div class="flex align-left justify-center direction-column medium-center medium-flex-center">
                     <?php if($title): ?>
                       <h1 class="dot"><?php echo $title ?></h1>
                     <?php endif; ?>
@@ -21,6 +22,12 @@ $description = get_field('form-hero__description');
                           <?php echo $description ?>
                         </div>
                     <?php endif; ?>
+
+                    <div class="button-group">
+                        <?php if ($button): ?>
+                            <a <?php acf_link_attrs($button); ?> class="button"><?php echo esc_html($button['title']); ?></a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
 
