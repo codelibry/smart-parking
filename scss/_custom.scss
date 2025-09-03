@@ -1537,3 +1537,14 @@ footer .secondary-links a {
     height: calc(100% - 30px);
   }
 }
+
+
+
+/*
+ * Feature Card
+ */
+.feature {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 2rem;
+}
