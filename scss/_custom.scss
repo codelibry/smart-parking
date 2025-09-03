@@ -1622,6 +1622,14 @@ footer .secondary-links a {
       margin-top: 20px;
     }
   }
+
+  .testimonials-carousel[data-testimonials-count="3"],
+  .testimonials-carousel[data-testimonials-count="2"],
+  .testimonials-carousel[data-testimonials-count="1"] {
+    .owl-nav {
+      display: none;
+    }
+  }
 }
 
 /*

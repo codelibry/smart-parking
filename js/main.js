@@ -49,25 +49,39 @@ jQuery(function($) {
     /*
      * Testimonials Carousel
      */
-    $('.testimonials-carousel').owlCarousel({
-        margin: 80,
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            800:{
-                items:2
-            },
-            1400:{
-                items:3
-            }
-        }
-    });
+    if($('.testimonials-carousel').length) {
+      const testimonialsCount = $('.testimonials-carousel').attr('data-testimonials-count');
+
+      console.log(testimonialsCount);
+
+      $('.testimonials-carousel').owlCarousel({
+          margin: 80,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          nav: testimonialsCount > 3,
+          responsive:{
+              0: {
+                  items: 1,
+                  loop: testimonialsCount > 1,
+                  nav: testimonialsCount > 1,
+                  autoplay: testimonialsCount > 1,
+              },
+              800: {
+                  items: 2,
+                  loop: testimonialsCount > 2,
+                  nav: testimonialsCount > 2,
+                  autoplay: testimonialsCount > 2,
+              },
+              1400: {
+                  items: 3,
+                  loop: testimonialsCount > 3,
+                  nav: testimonialsCount > 3,
+                  autoplay: testimonialsCount > 3,
+              }
+          }
+      });
+    }
+
 
 
     /*

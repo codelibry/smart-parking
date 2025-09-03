@@ -15,7 +15,7 @@ $testimonials = get_field('testimonials__list');
             </div>
         <?php endif; ?>
 
-        <div class="testimonials-carousel">
+        <div class="testimonials-carousel" data-testimonials-count="<?php echo count($testimonials) ?>">
             <?php foreach ($testimonials as $testimonial): 
                 $image = $testimonial['image'];
                 $description = $testimonial['description'];
