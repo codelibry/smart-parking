@@ -5,7 +5,7 @@ $clients = get_field('clients__list');
 
 ?>
 
-<div class="pt-100 pb-100">
+<div class="pt-100 pb-100 mobile-section">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="xxlarge-12 text-center cell">

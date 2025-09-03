@@ -1546,8 +1546,13 @@ footer .secondary-links a {
   .feature {
     display: grid;
     align-items: center;
-    grid-template-columns: 6rem 1fr;
+    grid-template-columns: 8rem 1fr;
     gap: 2rem;
+
+    img {
+      max-width: 8rem;
+      margin: auto;
+    }
   }
 
   @include breakpoint(500 down) {
@@ -1555,6 +1560,14 @@ footer .secondary-links a {
       grid-template-columns: 1fr;
     }
   }
+}
+
+
+/*
+ * Count Up Block
+ */
+.count-up .grid-x {
+  row-gap: 20px;
 }
 
 
@@ -1575,7 +1588,7 @@ footer .secondary-links a {
   .testimonial-footer {
     margin-left: 2.5rem;
     margin-top: 1.5rem;
-    display: flex
+    display: flex;
     align-items: center;
     gap: 1rem;
   }
@@ -1593,16 +1606,29 @@ footer .secondary-links a {
       object-fit: cover;
     }
   }
+
+  .testimonials-carousel {
+    .owl-stage-outer {
+      overflow: hidden;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
 }
 
-.testimonials-carousel {
-  .owl-stage {
-    display: flex;
-  }
-
-  .owl-nav {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-  }
+/*
+ * Fix for Estate Template
+ */
+@media screen and (max-width: 87.5em) {
+    .page-template-estate .mobile-section {
+        padding-block: 50px !important;
+    }
 }

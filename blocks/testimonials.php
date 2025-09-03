@@ -5,7 +5,7 @@ $testimonials = get_field('testimonials__list');
 
 ?>
 
-<div class="pt-80 pb-80 testimonials light-grey">
+<div class="pt-80 pb-80 testimonials light-grey mobile-section">
     <div class="grid-container">
         <?php if($title): ?>
             <div class="grid-x grid-padding-x">

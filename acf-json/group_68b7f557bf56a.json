@@ -47,6 +47,28 @@
             "delay": 0
         },
         {
+            "key": "field_68b83bd41f43d",
+            "label": "Form Title",
+            "name": "form-hero__form-title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_68b7f58ed52f5",
             "label": "Form",
             "name": "form-hero__form",
@@ -96,5 +118,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1756886914
+    "modified": 1756904422
 }
