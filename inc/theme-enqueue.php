@@ -39,6 +39,7 @@ function codelibry_enqueue () {
   wp_enqueue_script('owl-carousel', "$JS/owl.carousel.min.js", array('custom-jquery'), '1.0', true);
   wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array(), '5.0.8', true);
   wp_enqueue_script('fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), '3.5.7', true);
+  wp_enqueue_script('number-animate', "$JS/jquery.numberAnimate.js", array('jquery'), '3.5.7', true);
 
   wp_enqueue_script('app', "$JS/app.js", array('custom-jquery', 'foundation'), '1.0', true);
   wp_enqueue_script('main', "$JS/main.js", array('app'), '1.0', true);

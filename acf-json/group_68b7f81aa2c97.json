@@ -62,7 +62,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 3,
-                    "return_format": "id",
+                    "return_format": "array",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -116,5 +116,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1756887177
+    "modified": 1756896105
 }

@@ -39,7 +39,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -166,5 +166,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1756887379
+    "modified": 1756897058
 }

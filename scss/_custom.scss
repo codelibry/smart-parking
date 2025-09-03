@@ -1539,12 +1539,70 @@ footer .secondary-links a {
 }
 
 
+/*
+ * Features
+ */
+.features {
+  .feature {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 6rem 1fr;
+    gap: 2rem;
+  }
+
+  @include breakpoint(500 down) {
+    .feature {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 
 /*
- * Feature Card
+ * Testimonials Block
  */
-.feature {
-  display: grid;
-  grid-template-columns: 4rem 1fr;
-  gap: 2rem;
+.testimonials {
+  overflow: hidden;
+
+  .testimonial {
+    margin-left: 0;
+  }
+
+  .testimonial p {
+    margin: 0;
+  }
+
+  .testimonial-footer {
+    margin-left: 2.5rem;
+    margin-top: 1.5rem;
+    display: flex
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .testimonial-photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.testimonials-carousel {
+  .owl-stage {
+    display: flex;
+  }
+
+  .owl-nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -45,4 +45,36 @@ jQuery(function($) {
         $('#appeal-body-' + currentId).fadeIn();
     });
 
+
+    /*
+     * Testimonials Carousel
+     */
+    $('.testimonials-carousel').owlCarousel({
+        margin: 80,
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            800:{
+                items:2
+            },
+            1400:{
+                items:3
+            }
+        }
+    });
+
+
+    /*
+     * Animate Numbers
+     */
+    $('.js-counter').numberAnimate({
+        duration: 2000
+    });
+
 });

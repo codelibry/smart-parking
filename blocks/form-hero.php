@@ -6,7 +6,7 @@ $description = get_field('form-hero__description');
 
 ?>
 
-<div class="relative z2">
+<div class="relative z2 pt-80 pb-80">
     <div class="grid-container">
         <div class="grid-x grid-padding-x form-hero inner-hero flex align-center">
             <div class="large-5 cell pt-80 pb-80 flex align-center justify-left medium-flex-center">
@@ -25,9 +25,12 @@ $description = get_field('form-hero__description');
 
             <div class="large-1"></div>
 
-            <div class="large-6 cell">
+            <div class="large-6 cell light-blue pt-60 pb-40">
               <?php echo do_shortcode("[contact-form-7 id='$form']"); ?>
             </div>
         </div>
     </div>
+    
+    <img class="hex1" <?php img_src('hero-hexagons.svg'); ?> />
+    <img class="hex2" <?php img_src('hero-hexagons2.svg'); ?> />
 </div>
