@@ -25,9 +25,9 @@ function active($query_value, $filter_value) {
 function get_filtered_posts(){
   $posts_per_page = 9;
   $category = isset($_GET['c']) ? $_GET['c'] : '';
-  $page = isset($_GET['pageIndex']) ? $_GET['pageIndex'] : 1;
+  $page = isset($_GET['pageIndex']) ? (int)$_GET['pageIndex'] : 1;
 
-  $tax_query = array('relation' => 'AND');
+  $tax_query = ['relation' => 'AND'];
 
   if (!empty($category)) {
     $tax_query[] = [
@@ -37,35 +37,65 @@ function get_filtered_posts(){
     ];
   }
 
-  $args = [
-    'post_type' => 'latest',
-    'post_status' => 'publish',
-    'posts_per_page' => $posts_per_page,
-    'tax_query' => $tax_query,
-    'paged' => (int) $page,
-    'meta_query' => [
-      'relation' => 'OR',
-      [
-        'key'     => 'sticky_post',
-        'value'   => '1',
-        'compare' => '!=',
-      ],
-      [
-        'key'     => 'sticky_post',
-        'compare' => 'NOT EXISTS',
-      ],
+  $all_sticky_post_ids = get_posts([
+    'post_type'      => 'latest',
+    'posts_per_page' => -1,
+    'fields'         => 'ids',
+    'meta_query'     => [
+        [
+            'key'     => 'sticky_post',
+            'value'   => '1',
+            'compare' => '=',
+        ]
     ],
+  ]);
+
+  // Sticky posts first
+  $sticky_args = [
+    'post_type'      => 'latest',
+    'post_status'    => 'publish',
+    'posts_per_page' => $posts_per_page,
+    'tax_query'      => $tax_query,
+    'meta_key'       => 'sticky_post',
+    'meta_value'     => '1',
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+    'paged'          => $page,
   ];
+  $sticky_query = new WP_Query($sticky_args);
 
-  $query = new WP_Query($args);
+  $sticky_posts = $sticky_query->posts;
 
-  $max_pages = ceil($query->found_posts / $posts_per_page);
+  // If sticky < per_page, fill with others
+  $remaining = $posts_per_page - count($sticky_posts);
+  $normal_posts = [];
+
+  if ($remaining > 0) {
+    $normal_args = [
+      'post_type'      => 'latest',
+      'post_status'    => 'publish',
+      'posts_per_page' => $remaining,
+      'tax_query'      => $tax_query,
+      'post__not_in'   => $all_sticky_post_ids,
+      'orderby'        => 'date',
+      'order'          => 'DESC',
+      'paged'          => $page,
+    ];
+    $normal_query = new WP_Query($normal_args);
+    $normal_posts = $normal_query->posts;
+  }
+
+  // Merge sticky + normal
+  $posts = array_merge($sticky_posts, $normal_posts);
+
+  // Calculate pagination (approximate, since sticky + normal combined)
+  $total_posts = $sticky_query->found_posts + (isset($normal_query) ? $normal_query->found_posts : 0);
+  $max_pages = ceil($total_posts / $posts_per_page);
 
   // Get Filters
   $tags = get_terms([
     'taxonomy' => 'latest-category'
   ]);
-    
   ?>
 
   <div class="xxlarge-12 mb-100 filters flex align-center justify-center cell">
@@ -76,27 +106,31 @@ function get_filtered_posts(){
       <?php foreach ($tags as $tag): ?>
           <a href="#" class="button | js-filter <?php active($category, $tag->slug) ?>" data-c="<?php echo $tag->slug ?>">
               <?php echo $tag->name ?>
-          </a>            
+          </a>
       <?php endforeach; ?>
   </div>
 
   <div class="xxlarge-12 cell">
       <div class="article-grid">
           <div class="column">
-              <?php if ($query->have_posts()) {
-                  while ($query->have_posts()) {
-                      $query->the_post();
+              <?php 
+              if (!empty($posts)) {
+                  foreach ($posts as $post) {
+                      setup_postdata($post);
 
                       get_template_part('template-parts/components/post-card', null, [
-                          'link' => get_permalink(get_the_ID()),
-                          'title' => get_the_title(get_the_ID()),
-                          'date' => get_the_date('d M Y', get_the_ID()),
-                          'image' => get_the_post_thumbnail_url(get_the_ID()),
-                          'tags' => get_the_terms(get_the_ID(), 'latest-category'),
-                          'summary' => get_the_excerpt(get_the_ID()),
+                          'link'   => get_permalink($post->ID),
+                          'title'  => get_the_title($post->ID),
+                          'date'   => get_the_date('d M Y', $post->ID),
+                          'image'  => get_the_post_thumbnail_url($post->ID),
+                          'tags'   => get_the_terms($post->ID, 'latest-category'),
+                          'summary'=> get_the_excerpt($post->ID),
+                          'is_sticky' => get_field('sticky_post', $post->ID),
                       ]);
                   }
-              }; wp_reset_postdata(); ?>
+                  wp_reset_postdata();
+              }
+              ?>
           </div>
 
           <?php if($max_pages > 1): ?>
@@ -106,11 +140,11 @@ function get_filtered_posts(){
                           echo paginate_links([
                             'current' => $page,
                             'total'   => $max_pages,
-                            'base' => site_url() . '/latest' . '%_%',
-                            'format' => '?pageIndex=%#%',
+                            'base'    => site_url() . '/latest' . '%_%',
+                            'format'  => '?pageIndex=%#%',
                             'prev_next' => false
                           ]);
-                      ?> 
+                      ?>
                   </div>
               </div>
           <?php endif; ?>

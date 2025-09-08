@@ -37,6 +37,7 @@ $posts_list = get_latest_posts(
                                 'image' => get_the_post_thumbnail_url($post->ID),
                                 'tags' => get_the_terms($post->ID, 'latest-category'),
                                 'summary' => get_the_excerpt($post->ID),
+                                'is_sticky' => get_field('sticky_post', $post->ID),
                             ]);
                         endforeach; ?>
                     </div>

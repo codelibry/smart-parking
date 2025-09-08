@@ -6,10 +6,11 @@ $date = get_array_value($args, 'date');
 $image = get_array_value($args, 'image');
 $tags = get_array_value($args, 'tags');
 $summary = get_array_value($args, 'summary');
+$is_sticky = get_array_value($args, 'is_sticky');
 
 ?>
 
-<article>
+<article <?php echo $is_sticky ? 'style="border:5px solid green;"' : ''; ?>>
     <a href="<?php echo esc_url($link) ?>">
         <?php if($image): ?>
             <img 
