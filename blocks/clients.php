@@ -3,6 +3,10 @@
 $title = get_field('clients__title');
 $clients = get_field('clients__list');
 
+if(empty($clients)) {
+  return;
+}
+
 ?>
 
 <div class="pt-100 pb-100 mobile-section">

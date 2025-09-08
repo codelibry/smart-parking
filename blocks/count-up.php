@@ -2,6 +2,10 @@
 
 $count_ups = get_field('count-up__list');
 
+if(empty($count_ups)) {
+  return;
+}
+
 ?>
 
 <?php if($count_ups): ?>

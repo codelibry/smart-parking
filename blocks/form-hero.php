@@ -6,6 +6,10 @@ $form_title = get_field('form-hero__form-title');
 $description = get_field('form-hero__description');
 $button = get_field('form-hero__button');
 
+if(!$form) {
+  return;
+}
+
 ?>
 
 <div class="relative z2 pt-80 pb-80 mobile-section">

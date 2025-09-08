@@ -5,6 +5,10 @@ $description = get_field('features__description');
 $button = get_field('features__link');
 $features = get_field('features__list');
 
+if(empty($features)) {
+  return;
+}
+
 ?>
 
 <div class="relative z2 light-grey pt-80 pb-80 mobile-section">
