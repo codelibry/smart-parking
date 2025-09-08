@@ -3,6 +3,10 @@
 $title = get_field('testimonials__title');
 $testimonials = get_field('testimonials__list');
 
+if(empty($testimonials)) {
+  return;
+}
+
 ?>
 
 <div class="pt-80 pb-80 testimonials light-grey mobile-section">
