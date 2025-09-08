@@ -10,7 +10,7 @@ $is_sticky = get_array_value($args, 'is_sticky');
 
 ?>
 
-<article <?php echo $is_sticky ? 'style="border:5px solid green;"' : ''; ?>>
+<article>
     <a href="<?php echo esc_url($link) ?>">
         <?php if($image): ?>
             <img 
