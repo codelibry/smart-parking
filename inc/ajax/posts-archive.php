@@ -27,6 +27,8 @@ function get_filtered_posts(){
   $category = isset($_GET['c']) ? $_GET['c'] : '';
   $page = isset($_GET['pageIndex']) ? (int)$_GET['pageIndex'] : 1;
 
+  if($page === 0) $page = 1;
+
   $tax_query = ['relation' => 'AND'];
 
   if (!empty($category)) {
@@ -115,7 +117,13 @@ function get_filtered_posts(){
           <div class="column">
               <?php 
               if (!empty($posts)) {
-                  foreach ($posts as $post) {
+                  foreach ($posts as $i => $post) {
+
+                      // Skip the very first post as it should be already placed in hero
+                      if($page === 1 && $i === 0) {
+                        continue;
+                      }
+
                       setup_postdata($post);
 
                       get_template_part('template-parts/components/post-card', null, [

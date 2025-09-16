@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -34,48 +35,9 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "clone": [
                 "group_67eb96610c607"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_67ef8646246ca",
-            "label": "Featured Post",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_67ef8662246cb",
-            "label": "Featured Post",
-            "name": "featured-post",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_67ef85ab8a5cc"
             ],
             "display": "seamless",
             "layout": "block",
@@ -101,5 +63,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743751505
+    "acfml_field_group_mode": "advanced",
+    "modified": 1758029469
 }

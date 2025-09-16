@@ -1,6 +1,12 @@
 <?php
 
-$post_id = get_field('featured-post__id');
+$featured_posts = get_latest_posts('latest', 1);
+
+if(empty($featured_posts)) {
+  return;
+}
+
+$post_id = $featured_posts[0]->ID;
 
 $post_url = get_permalink($post_id);
 $post_title = get_the_title($post_id);
