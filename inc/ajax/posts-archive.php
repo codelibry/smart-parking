@@ -118,12 +118,6 @@ function get_filtered_posts(){
               <?php 
               if (!empty($posts)) {
                   foreach ($posts as $i => $post) {
-
-                      // Skip the very first post as it should be already placed in hero
-                      if($page === 1 && $i === 0) {
-                        continue;
-                      }
-
                       setup_postdata($post);
 
                       get_template_part('template-parts/components/post-card', null, [
