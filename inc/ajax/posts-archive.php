@@ -100,7 +100,7 @@ function get_filtered_posts(){
   ]);
   ?>
 
-  <div class="xxlarge-12 mb-100 filters flex align-center justify-center cell">
+  <div class="xxlarge-12 mb-100 filters flex align-center justify-center cell flex-wrap">
       <a href="#" class="button | js-filter <?php active($category, '') ?>" data-c="">
           <?php _e('All', 'spt') ?>
       </a>

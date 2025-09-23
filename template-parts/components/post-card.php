@@ -22,7 +22,7 @@ $is_sticky = get_array_value($args, 'is_sticky');
         <h4><?php echo esc_html($title) ?></h4>
         <p><?php echo esc_html($summary) ?></p>
     </a>
-    <div class="article-info">
+    <div class="article-info flex-wrap">
         <div class="date"><?php echo esc_html(strtoupper($date)) ?></div>
         <div class="tags">
             <?php if ($tags) : ?>
