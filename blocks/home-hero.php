@@ -6,6 +6,8 @@ $link_button1 = get_field('home-hero__button1');
 $link_button2 = get_field('home-hero__button2');
 $video_link = get_field('home-hero__video');
 
+$country_buttons = get_field('home-hero__country-buttons');
+
 ?>
 
 <div class="hero relative z1">
@@ -30,6 +32,25 @@ $video_link = get_field('home-hero__video');
                             <a <?php acf_link_attrs($link_button2); ?> class="button black hollow"><?php echo esc_html($link_button2['title']); ?></a>
                         <?php endif; ?>
                     </div>
+
+                    <?php if(!empty($country_buttons)): ?>
+                        <div class="button-group">
+                            <?php foreach ($country_buttons as $country_button): 
+                                $link = $country_button['link'];
+                                $flag_1 = $country_button['flag-1'];
+                                $flag_2 = $country_button['flag-2'];
+                            ?>
+                                <a href="<?php echo $link ?>" class="button black hollow">
+                                    <?php if($flag_1): ?>
+                                        <img width="16" height="16" src="<?php echo $flag_1 ?>" />
+                                    <?php endif; ?>
+                                    <?php if($flag_2): ?>
+                                        <img width="20" height="20" src="<?php echo $flag_2 ?>" />
+                                    <?php endif; ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                     
                     <?php if ($video_link): ?>
                         <a class="play-button" <?php acf_link_attrs($video_link); ?>>
