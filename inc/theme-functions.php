@@ -208,3 +208,32 @@ add_filter('wpseo_sitemap_entry', function($url) {
     }
     return $url;
 });
+
+
+/**
+ * =================================================================
+ * Force robots.txt point at the specific sitemap.xml
+ * =================================================================
+ */
+add_filter('robots_txt', function($output, $public) {
+
+    // Remove everything after the last "Disallow:" line
+    $lines = explode("\n", $output);
+    $new_output = array();
+    
+    foreach ($lines as $line) {
+        // Skip any sitemap lines
+        if (stripos($line, 'Sitemap:') === false) {
+            $new_output[] = $line;
+        }
+    }
+
+    $sitemap = "https://www.smartparking.com/sitemap_index.xml";
+    
+    // Add our single sitemap
+    $result = implode("\n", $new_output);
+    $result = rtrim($result) . "\n\nSitemap: $sitemap\n";
+    
+    return $result;
+
+}, PHP_INT_MAX, 2);
