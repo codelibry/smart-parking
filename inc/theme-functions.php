@@ -198,20 +198,6 @@ add_filter('get_the_excerpt', function ($excerpt, $post) {
 
 /**
  * =================================================================
- * Filter out /en pages
- * =================================================================
- */
-add_filter('wpseo_sitemap_entry', function($url) {
-    // Remove all /en/ URLs
-    if (strpos($url['loc'], '/en/') !== false) {
-        return false; // this removes it from the sitemap
-    }
-    return $url;
-});
-
-
-/**
- * =================================================================
  * Force robots.txt point at the specific sitemap.xml
  * =================================================================
  */
@@ -237,3 +223,61 @@ add_filter('robots_txt', function($output, $public) {
     return $result;
 
 }, PHP_INT_MAX, 2);
+
+
+/**
+ * =================================================================
+ * Fix 'latest' post-type sitemap
+ * =================================================================
+ */
+function custom_yoast_sitemap_entry($url, $type, $post) {
+    if ($type === 'post' && $post->post_type === 'latest') {
+        $langs = [
+            'uk' => 'latest',
+            'ua' => 'latest',
+            'au' => 'latest',
+            'nz' => 'latest',
+            'dk' => 'senest',
+            'de' => 'news-und-fallstudien',
+            'ch-de' => 'news-und-fallstudien',
+            'ch-it' => 'news-e-casi-di-studio',
+            'ch-fr' => 'actualites',
+        ];
+
+        // Get the post's language
+        $language_info = wpml_get_language_information(null, $post->ID);
+        $language = !empty($language_info['language_code']) ? $language_info['language_code'] : 'uk';
+
+        // Get the base slug
+        $base = isset($langs[$language]) ? $langs[$language] : $langs['uk'];
+
+        do_action('wpml_switch_language', 'uk');
+        $month = strtolower(get_the_date('F', $post));
+        do_action('wpml_switch_language', 'uk');
+
+        $year = get_the_date('Y', $post);
+        $title = $post->post_name;
+
+        $site_url = get_site_url();
+
+        // Update the sitemap URL
+        $url['loc'] = "{$site_url}/{$language}/{$base}/{$year}/{$month}/{$title}/";
+    }
+
+    return $url;
+}
+add_filter('wpseo_sitemap_entry', 'custom_yoast_sitemap_entry', 10, 3);
+
+
+/**
+ * =================================================================
+ * Filter out /en pages
+ * =================================================================
+ */
+add_filter('wpseo_sitemap_entry', function($url) {
+    // Remove all /en/ URLs
+    if (strpos($url['loc'], '/en/') !== false) {
+        return false; // this removes it from the sitemap
+    }
+    return $url;
+});
