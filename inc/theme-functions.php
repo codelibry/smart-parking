@@ -194,3 +194,17 @@ add_filter('get_the_excerpt', function ($excerpt, $post) {
     }
     return $excerpt;
 }, 10, 2);
+
+
+/**
+ * =================================================================
+ * Filter out /en pages
+ * =================================================================
+ */
+add_filter('wpseo_sitemap_entry', function($url) {
+    // Remove all /en/ URLs
+    if (strpos($url['loc'], '/en/') !== false) {
+        return false; // this removes it from the sitemap
+    }
+    return $url;
+});
