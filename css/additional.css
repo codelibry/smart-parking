@@ -111,3 +111,12 @@
     width: 100%;
   }
 }/*# sourceMappingURL=additional.css.map */
+
+
+
+/*
+ * Hide second column with button on us page "Pay a Parking Charge"
+ */
+.page-id-9181 .hero .grid-x .cell:nth-child(2) {
+	display: none !important;
+}
