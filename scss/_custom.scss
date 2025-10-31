@@ -1671,3 +1671,17 @@ footer .secondary-links a {
         padding-block: 50px !important;
     }
 }
+
+/*
+ * Fix Home Hero
+ */
+.home .hero {
+  .grid-container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .button.black.hollow {
+    background-color: $white;
+  }
+}
