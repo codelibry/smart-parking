@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
@@ -35,7 +35,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "clone": [
                 "group_67f4e1ff6ad85"
             ],
@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "placement": "top",
             "endpoint": 0,
             "selected": 0
@@ -77,7 +77,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "clone": [
                 "group_67eb96610c607"
             ],
@@ -127,6 +127,48 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_690ca820664e6",
+            "label": "FAQ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_690ca82a664e7",
+            "label": "FAQ",
+            "name": "faq-secondary",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_690ca62e8d4cc"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -147,6 +189,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfml_field_group_mode": "advanced",
-    "modified": 1744715057
+    "modified": 1762437200
 }

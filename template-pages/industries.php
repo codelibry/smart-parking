@@ -15,4 +15,6 @@ if (have_rows('industries-repeater')) :
     endwhile;
 endif;
 
+get_template_part('blocks/faq-secondary');
+
 get_footer();

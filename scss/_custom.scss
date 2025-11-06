@@ -868,6 +868,7 @@ footer {
     &:before { color: $primary-color; }
 }
 
+
 //TEAM BLOCK
 @include breakpoint(767 down) { 
     .team-block .large-3 { justify-content: center;
@@ -1683,5 +1684,45 @@ footer .secondary-links a {
 
   .button.black.hollow {
     background-color: $white;
+  }
+}
+
+/*
+ * Accordion Secondary
+ */
+.accordion.secondary {
+
+  .accordion-title {
+    margin-bottom: 0 !important;
+    padding-inline: 25px !important;
+    padding-block: 20px 30px !important;
+  }
+
+  .accordion-content {
+    margin-inline: 25px !important;
+    padding-block: 20px 35px !important;
+    border-top: 1px solid #0000001A;
+  }
+
+  // grey variant
+  .accordion-itemm:nth-child(2n + 1) {
+    background-color: #F5F6F7;
+
+    .accordion-title {
+      background-color: #F5F6F7;
+    }
+  }
+}
+
+/*
+ * FAQ Secondary
+ */
+.faq-secondary {
+  &__title {
+    margin-bottom: 5rem;
+  }
+
+  &__group {
+    margin-bottom: 4.5rem;
   }
 }

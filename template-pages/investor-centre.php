@@ -12,5 +12,6 @@ get_template_part('blocks/reports');
 get_template_part('blocks/members');
 get_template_part('blocks/contact-form');
 get_template_part('blocks/practices');
+get_template_part('blocks/faq-secondary');
 
 get_footer();

@@ -13,5 +13,6 @@ get_template_part('blocks/testimonial');
 get_template_part('blocks/partners');
 get_template_part('blocks/contact-form');
 get_template_part('blocks/related-posts');
+get_template_part('blocks/faq-secondary');
 
 get_footer(); 

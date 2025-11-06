@@ -21,4 +21,6 @@ get_template_part('blocks/content', null, [
 
 get_template_part('blocks/contact-form');
 
+get_template_part('blocks/faq-secondary');
+
 get_footer(); 

@@ -11,5 +11,6 @@ get_template_part('blocks/full-image');
 get_template_part('blocks/map');
 get_template_part('blocks/members');
 get_template_part('blocks/partners');
+get_template_part('blocks/faq-secondary');
 
 get_footer(); 
