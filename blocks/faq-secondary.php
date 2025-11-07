@@ -3,6 +3,10 @@
 $title = get_field('faq-secondary__title');
 $tabs = get_field('faq-secondary__tabs');
 
+if(!$tabs || empty($tabs)) {
+  return;
+}
+
 ?>
 
 <div class="faq-secondary | pt-100 pb-100">
@@ -14,18 +18,20 @@ $tabs = get_field('faq-secondary__tabs');
                     <h2 class="text-center mb-80"><?php echo $title ?></h2>
                 <?php endif; ?>
 
-                <div class="tab-buttons-wrapper | mb-80">
-                    <div class="tab-buttons">
-                      <?php foreach($tabs as $i => $tab): 
-                        $title = $tab['tab-title'];
-                        $active = $i === 0 ? 'active' : '';
-                      ?>
-                        <button class="button | tab-button | <?php echo $active ?>" data-tab="tab<?php echo $i ?>">
-                          <?php echo $title ?>
-                        </button>
-                      <?php endforeach; ?>
+                <?php if(count($tabs) > 1): ?>
+                    <div class="tab-buttons-wrapper | mb-80">
+                        <div class="tab-buttons">
+                          <?php foreach($tabs as $i => $tab): 
+                            $title = $tab['tab-title'];
+                            $active = $i === 0 ? 'active' : '';
+                          ?>
+                            <button class="button | tab-button | <?php echo $active ?>" data-tab="tab<?php echo $i ?>">
+                              <?php echo $title ?>
+                            </button>
+                          <?php endforeach; ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
 
                 <div class="faq-secondary__tabs">
                     <?php foreach($tabs as $i => $tab): 
