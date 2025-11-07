@@ -1720,9 +1720,50 @@ footer .secondary-links a {
 .faq-secondary {
   &__title {
     margin-bottom: 5rem;
+    font-size: 3.5rem;
   }
 
   &__group {
     margin-bottom: 4.5rem;
   }
+}
+
+/*
+ * Tabs
+ */
+.tab-buttons-wrapper {
+  overflow: auto;
+}
+
+.tab-buttons {
+  width: max-content;
+  border-radius: 99999px;
+  overflow: hidden;
+  background-color: $primary-color;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.tab-button {
+  font-weight: 400;
+  border-radius: 99999px;
+  padding: 1rem 2rem;
+}
+
+.tab-button.active {
+  border: 1px solid $primary-color;
+  background-color: $white;
+  color: $black;
+  font-weight: 700;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }

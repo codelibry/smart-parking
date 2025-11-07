@@ -91,4 +91,43 @@ jQuery(function($) {
         duration: 2000
     });
 
+
+    /*
+     * Tabs
+     */
+    function Tabs() {
+      if(!document.querySelector('.faq-secondary')) {
+        return;
+      }
+
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+      const selectTrigger = document.querySelector('.tab-select-trigger');
+      const selectOptions = document.querySelector('.tab-select-options');
+      const tabOptions = document.querySelectorAll('.tab-option');
+
+      function activateTab(tabId) {
+        tabContents.forEach(content =>
+          content.classList.toggle('active', content.id === tabId)
+        );
+
+        tabButtons.forEach(button =>
+          button.classList.toggle('active', button.dataset.tab === tabId)
+        );
+
+        selectTrigger.textContent = document.querySelector(
+          `.tab-option[data-tab="${tabId}"]`
+        ).textContent;
+      }
+
+      // Buttons click
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          activateTab(button.dataset.tab);
+        });
+      });
+    }
+
+    Tabs();
+
 });
