@@ -39,3 +39,5 @@ $posts_list = get_latest_posts(
         </div>
     </div>
 </div>
+
+<?php wp_reset_postdata() ?>
