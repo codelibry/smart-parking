@@ -66,7 +66,7 @@ if(!$title) {
                                         <img width="16" height="16" src="<?php echo $flag_1 ?>" />
                                     <?php endif; ?>
                                     <?php if($flag_2): ?>
-                                        <img width="16" height="16" src="<?php echo $flag_2 ?>" />
+                                        <img width="20" height="20" src="<?php echo $flag_2 ?>" />
                                     <?php endif; ?>
                                 </a>
                             <?php endforeach; ?>
