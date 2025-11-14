@@ -15,7 +15,7 @@ if(!$tabs || empty($tabs)) {
             <div class="large-10 large-offset-1 cell">
 
                 <?php if($title): ?>
-                    <h2 class="text-center mb-80"><?php echo $title ?></h2>
+                    <h2 class="text-center h1 mb-80"><?php echo $title ?></h2>
                 <?php endif; ?>
 
                 <?php if(count($tabs) > 1): ?>

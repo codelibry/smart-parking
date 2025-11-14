@@ -1701,6 +1701,7 @@ footer .secondary-links a {
   .accordion-content {
     margin-inline: 25px !important;
     padding-block: 20px 35px !important;
+    padding-inline: 0 !important;
     border-top: 1px solid #0000001A;
   }
 
@@ -1720,7 +1721,6 @@ footer .secondary-links a {
 .faq-secondary {
   &__title {
     margin-bottom: 5rem;
-    font-size: 3.5rem;
   }
 
   &__group {
