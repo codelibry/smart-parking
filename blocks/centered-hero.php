@@ -10,6 +10,8 @@ $button_video = get_field('centered-hero__button-video');
 $show_scroller = get_array_value($args, 'show_scroller', get_field('centered-hero__show-scroller'));
 $additional_classes = get_array_value($args, 'additional_classes', get_field('centered-hero__additional-classes'));
 
+$country_buttons = get_array_value($args, 'country_buttons', get_field('centered-hero__country-buttons'));
+
 if(!$title) {
   return;
 }
@@ -26,7 +28,7 @@ if(!$title) {
                     <?php endif; ?>
 
                     <?php if($description): ?>
-                        <div class="lead">
+                        <div class="lead | mb-20">
                             <?php echo $description ?>
                         </div>
                     <?php endif; ?>
@@ -51,6 +53,25 @@ if(!$title) {
                             </a>
                         <?php endif; ?>
                     </div>
+
+                    <?php if(!empty($country_buttons)): ?>
+                        <div class="button-group">
+                            <?php foreach ($country_buttons as $country_button): 
+                                $link = $country_button['link'];
+                                $flag_1 = $country_button['flag-1'];
+                                $flag_2 = $country_button['flag-2'];
+                            ?>
+                                <a href="<?php echo $link ?>" class="button black hollow">
+                                    <?php if($flag_1): ?>
+                                        <img width="16" height="16" src="<?php echo $flag_1 ?>" />
+                                    <?php endif; ?>
+                                    <?php if($flag_2): ?>
+                                        <img width="16" height="16" src="<?php echo $flag_2 ?>" />
+                                    <?php endif; ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
                 <?php if($show_scroller): ?>

@@ -10,7 +10,8 @@ get_template_part('blocks/breadcrumbs');
 get_template_part('blocks/centered-hero', null, [
   'title' => get_the_title(),
   'description' => get_field('policy__description'),
-  'show_scroller' => true
+  'country_buttons' => get_field('policy__country-buttons'),
+  'show_scroller' => true,
 ]);
 
 if(get_field('policy__show-image')):
